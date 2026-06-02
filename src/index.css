@@ -766,36 +766,60 @@ button {
 
 /* Personalized CTA */
 .personalized-cta {
-  background: linear-gradient(135deg, var(--brown) 0%, var(--yellow) 100%);
-  padding: 4rem 2rem;
-  text-align: center;
+  background-color: #000000;
+  padding: 1rem 2rem;
 }
 
-.personalized-cta-container h2 {
-  color: var(--black);
-  margin-bottom: 1rem;
+.personalized-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.personalized-cta-container p {
-  color: var(--black);
+.personalized-cta-banner {
+  background: linear-gradient(135deg, #5b3a00 0%, #7a5200 100%);
+  border-radius: 14px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cta-banner-content h2 {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.cta-banner-content p {
+  color: var(--white);
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin: 0;
 }
 
-.personalized-cta .cta-button {
-  background-color: var(--black);
-  color: var(--yellow);
-  margin-top: 1.5rem;
-}
+/* Responsive CTA Banner */
+@media (max-width: 768px) {
+  .personalized-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
 
-.personalized-cta .cta-button:hover {
-  background-color: var(--dark-gray);
+  .cta-banner-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-banner-content p {
+    font-size: 1rem;
+  }
 }
 
 /* Printing Services */
 .printing-services {
   background-color: var(--white);
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .printing-services-container {
@@ -806,35 +830,40 @@ button {
 .printing-services h2 {
   color: var(--black);
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  font-size: 2.5rem;
 }
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 .category-box {
   background-color: var(--black);
-  padding: 2.5rem;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  min-height: 200px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid var(--black);
 }
 
 .category-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  border-color: var(--yellow);
 }
 
 .category-box h3 {
-  color: var(--yellow);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
   margin: 0;
-  font-size: 1.2rem;
+  text-align: center;
 }
 
 .view-all-container {
@@ -1192,7 +1221,7 @@ button {
   }
 
   .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .products-grid {
@@ -1288,11 +1317,14 @@ button {
   }
 
   .services-grid,
-  .categories-grid,
   .features-grid,
   .products-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .client-grid {

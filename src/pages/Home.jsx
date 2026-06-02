@@ -66,9 +66,13 @@ const Home = () => {
 
       <section className="personalized-cta">
         <div className="personalized-cta-container">
-          <h2>NEED SOMETHING PERSONALIZED?</h2>
-          <p>We create custom designs for your gifts, souvenirs and giveaways!</p>
-          <button className="cta-button">ORDER NOW</button>
+          <div className="personalized-cta-banner">
+            <div className="cta-banner-content">
+              <h2>NEED SOMETHING PERSONALIZED?</h2>
+              <p>We create custom designs for your gifts, souvenirs and giveaways!</p>
+            </div>
+            <button className="cta-button-yellow">ORDER NOW</button>
+          </div>
         </div>
       </section>
 
@@ -84,7 +88,7 @@ const Home = () => {
             <div className="category-box"><h3>STICKERS</h3></div>
           </div>
           <div className="view-all-container">
-            <button className="cta-button">VIEW ALL SERVICES</button>
+            <button className="cta-button-yellow">VIEW ALL SERVICES</button>
           </div>
         </div>
       </section>
