@@ -1,6 +1,7 @@
 import heroBg from '../assets/hero-bg.jpg'
 import serviceCard from '../assets/service-card.png'
 import printerLarge from '../assets/printer-large.png'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -170,7 +171,7 @@ const Home = () => {
       <section className="free-quote">
         <div className="free-quote-container">
           <h2>GET A FREE QUOTE TODAY!</h2>
-          <button className="cta-button" onClick={() => window.location.href = '/contact'}>Contact Us!</button>
+          <Link to="/contact" className="cta-button-large">Contact Us</Link>
         </div>
       </section>
     </>

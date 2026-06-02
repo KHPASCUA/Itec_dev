@@ -1062,23 +1062,48 @@ button {
 
 /* Free Quote */
 .free-quote {
-  background-color: var(--yellow);
-  padding: 4rem 2rem;
+  background-color: #ffd000;
+  padding: 0;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.free-quote-container {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
+  padding: 2rem;
 }
 
 .free-quote-container h2 {
   color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
-.free-quote .cta-button {
-  background-color: var(--black);
-  color: var(--yellow);
+.cta-button-large {
+  display: inline-block;
+  background-color: #fff5e6;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 280px;
+  height: 60px;
+  line-height: 36px;
 }
 
-.free-quote .cta-button:hover {
-  background-color: var(--dark-gray);
+.cta-button-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact */
@@ -1168,9 +1193,8 @@ button {
 
 /* Footer */
 .footer {
-  background-color: var(--black);
-  padding: 4rem 2rem 2rem;
-  border-top: 2px solid var(--yellow);
+  background-color: #111;
+  padding: 60px 2rem;
 }
 
 .footer-container {
@@ -1180,8 +1204,8 @@ button {
 
 .footer-content {
   display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
 }
 
 .footer-logo {
@@ -1195,25 +1219,41 @@ button {
   height: 60px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--white);
 }
 
 .footer-logo .footer-logo-text {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: var(--yellow);
-  letter-spacing: 5px;
+  color: var(--white);
+  letter-spacing: 3px;
 }
 
 .footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid var(--medium-gray);
+  text-align: left;
+  padding-top: 1rem;
 }
 
 .footer-bottom p {
-  color: var(--light-gray);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo .footer-logo-text {
+    font-size: 2rem;
+  }
+
+  .footer-bottom p {
+    font-size: 1rem;
+  }
 }
 
 /* Responsive Design */
