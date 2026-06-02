@@ -552,7 +552,7 @@ button {
 /* Contact Page Content */
 .contact-page-content {
   background-color: var(--white);
-  padding: 6rem 2rem 4rem 2rem;
+  padding: 8rem 2rem 4rem 2rem;
 }
 
 .contact-page-container {
@@ -609,6 +609,20 @@ button {
 .contact-icon-yellow {
   font-size: 2.5rem;
   color: var(--yellow);
+}
+
+.contact-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  flex-shrink: 0;
 }
 
 .contact-link-underlined {
@@ -703,6 +717,20 @@ button {
 .social-icon-yellow {
   font-size: 2.5rem;
   color: var(--yellow);
+}
+
+.social-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  flex-shrink: 0;
 }
 
 .contact-form-card {

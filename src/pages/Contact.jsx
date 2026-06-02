@@ -19,11 +19,11 @@ const ContactPage = () => {
               <h2>Get in Touch</h2>
               <div className="contact-card-single">
                 <div className="contact-info-item">
-                  <span className="contact-icon-yellow">✉️</span>
+                  <div className="contact-icon-circle">M</div>
                   <a href="mailto:dianetcafe00@gmail.com" className="contact-link-underlined">dianetcafe00@gmail.com</a>
                 </div>
                 <div className="contact-info-item">
-                  <span className="contact-icon-yellow">🕐</span>
+                  <div className="contact-icon-circle">◷</div>
                   <span>8:00 AM - 8:00 PM</span>
                 </div>
               </div>
@@ -37,17 +37,17 @@ const ContactPage = () => {
               <div className="contact-card social-card-white">
                 <div className="social-row">
                   <div className="social-item">
-                    <span className="social-icon-yellow">📘</span>
+                    <div className="social-icon-circle">f</div>
                     <span>Facebook: Dianetcafe</span>
                   </div>
                   <div className="social-item">
-                    <span className="social-icon-yellow">📺</span>
+                    <div className="social-icon-circle">▶</div>
                     <span>YouTube: Dianetcafe</span>
                   </div>
                 </div>
                 <div className="social-row">
                   <div className="social-item">
-                    <span className="social-icon-yellow">📷</span>
+                    <div className="social-icon-circle">📷</div>
                     <span>Instagram: @dianetcafe</span>
                   </div>
                 </div>
