@@ -1,4 +1,5 @@
 import heroBg from '../assets/hero-bg.jpg'
+import logo from '../assets/logo.png'
 
 const About = () => {
   return (
@@ -20,40 +21,25 @@ const About = () => {
         <div className="about-content-container">
           <div className="about-row">
             <div className="about-text-left">
-              <h2>Our Story</h2>
               <p>
-                Founded in 2020, DianetCafe has been providing professional printing and computer services 
-                with passion and dedication. We believe in quality, efficiency, and creating excellent 
-                experiences for every customer.
-              </p>
-              <p>
-                Our services include high-quality printing, computer rentals, personalized gifts, and online 
-                solutions. Every project tells a story of craftsmanship and commitment to excellence.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
               </p>
             </div>
             <div className="about-logo-right">
-              <div className="circular-logo-placeholder">
-                <span className="logo-placeholder-text">DIANETCAFE</span>
-              </div>
+              <img src={logo} alt="DianetCafe Logo" className="about-logo-image" />
             </div>
           </div>
 
           <div className="about-row">
             <div className="about-collage-left">
-              <div className="collage-placeholder">
+              <div className="collage-placeholder-white">
                 <span className="collage-icon">🖨️</span>
                 <p>Photo Collage</p>
               </div>
             </div>
             <div className="about-text-right">
-              <h2>Our Mission</h2>
               <p>
-                Whether you need printing services, computer access, or personalized items, DianetCafe is 
-                your trusted partner for all your needs.
-              </p>
-              <p>
-                We strive to exceed expectations with every project, delivering exceptional quality and 
-                service that keeps our customers coming back.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
               </p>
             </div>
           </div>

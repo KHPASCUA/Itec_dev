@@ -270,10 +270,12 @@ button {
 /* About Hero */
 .about-hero {
   background-size: cover;
-  background-position: center;
+  background-position: center right;
   background-repeat: no-repeat;
-  padding: 6rem 2rem;
-  text-align: center;
+  padding: 0 0 0 18%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
@@ -284,18 +286,15 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.5) 100%);
   pointer-events: none;
 }
 
 .about-hero-container {
   position: relative;
   z-index: 1;
-}
-
-.about-hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  text-align: left;
+  max-width: 850px;
 }
 
 .about-hero h1 {
@@ -315,8 +314,8 @@ button {
 .about-hero-description {
   font-size: 1.25rem;
   color: var(--off-white);
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 850px;
+  margin: 0;
   line-height: 1.8;
 }
 
@@ -352,41 +351,48 @@ button {
 
 .about-text-left p,
 .about-text-right p {
-  color: #666;
-  font-size: 1.1rem;
+  color: var(--black);
+  font-size: 1.2rem;
   line-height: 1.8;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.circular-logo-placeholder {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
+.about-logo-right {
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
+  align-items: center;
 }
 
-.logo-placeholder-text {
-  color: var(--yellow);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+.about-logo-image {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
 }
 
 .collage-placeholder {
   width: 100%;
   height: 400px;
-  background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
+  background-color: var(--white);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.collage-placeholder-white {
+  width: 100%;
+  height: 400px;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
 }
 
 .collage-icon {
@@ -394,8 +400,9 @@ button {
   margin-bottom: 1rem;
 }
 
-.collage-placeholder p {
-  color: var(--off-white);
+.collage-placeholder p,
+.collage-placeholder-white p {
+  color: var(--black);
   font-size: 1.2rem;
   margin: 0;
 }
@@ -1332,6 +1339,16 @@ button {
     font-size: 3rem;
   }
 
+  .about-hero {
+    padding: 0 0 0 10%;
+    min-height: 350px;
+  }
+
+  .about-logo-image {
+    width: 280px;
+    height: 280px;
+  }
+
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1427,17 +1444,23 @@ button {
     gap: 2rem;
   }
 
-  .circular-logo-placeholder {
-    width: 200px;
-    height: 200px;
-  }
-
-  .collage-placeholder {
-    height: 300px;
+  .about-hero {
+    padding: 0 0 0 5%;
+    min-height: 300px;
   }
 
   .about-hero h1 {
     font-size: 2.5rem;
+  }
+
+  .about-logo-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .collage-placeholder,
+  .collage-placeholder-white {
+    height: 300px;
   }
 
   .page-hero h1 {
