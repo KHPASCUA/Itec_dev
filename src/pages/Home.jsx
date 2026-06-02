@@ -1,4 +1,5 @@
 import heroBg from '../assets/hero-bg.jpg'
+import serviceCard from '../assets/service-card.png'
 
 const Home = () => {
   return (
@@ -24,31 +25,40 @@ const Home = () => {
 
       <section id="services" className="services">
         <div className="services-container">
+          <div className="services-arrow">↓</div>
           <h2>WHAT WE OFFER</h2>
           <div className="services-grid">
             <div className="service-card">
-              <div className="service-icon">🖨️</div>
-              <h3>Printing Services</h3>
-              <p>High-quality printing for documents, photos, and more</p>
-              <a href="#" className="service-link">LEARN MORE</a>
+              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-content">
+                <h3>Printing Services</h3>
+                <p>High-quality printing for documents, photos, and more</p>
+                <a href="#" className="service-link">LEARN MORE &gt;</a>
+              </div>
             </div>
             <div className="service-card">
-              <div className="service-icon">💻</div>
-              <h3>Computer Rental</h3>
-              <p>Affordable computer rental for your computing needs</p>
-              <a href="#" className="service-link">LEARN MORE</a>
+              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-content">
+                <h3>Computer Rental</h3>
+                <p>Affordable computer rental for your computing needs</p>
+                <a href="#" className="service-link">LEARN MORE &gt;</a>
+              </div>
             </div>
             <div className="service-card">
-              <div className="service-icon">🎁</div>
-              <h3>Personalized Gifts</h3>
-              <p>Custom gifts for special occasions and events</p>
-              <a href="#" className="service-link">LEARN MORE</a>
+              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-content">
+                <h3>Personalized Gifts</h3>
+                <p>Custom gifts for special occasions and events</p>
+                <a href="#" className="service-link">LEARN MORE &gt;</a>
+              </div>
             </div>
             <div className="service-card">
-              <div className="service-icon">🌐</div>
-              <h3>Online Services</h3>
-              <p>Digital solutions for your online requirements</p>
-              <a href="#" className="service-link">LEARN MORE</a>
+              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-content">
+                <h3>Online Services</h3>
+                <p>Digital solutions for your online requirements</p>
+                <a href="#" className="service-link">LEARN MORE &gt;</a>
+              </div>
             </div>
           </div>
         </div>
