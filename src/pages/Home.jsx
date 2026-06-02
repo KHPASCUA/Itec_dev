@@ -1,5 +1,6 @@
 import heroBg from '../assets/hero-bg.jpg'
 import serviceCard from '../assets/service-card.png'
+import printerLarge from '../assets/printer-large.png'
 
 const Home = () => {
   return (
@@ -95,11 +96,9 @@ const Home = () => {
 
       <section className="printer-image-section">
         <div className="printer-image-container">
-          <div className="printer-placeholder">
-            <div className="placeholder-content">
-              <span className="placeholder-icon">🖨️</span>
-              <p>Large Printer Image</p>
-            </div>
+          <div className="printer-image-wrapper">
+            <img src={printerLarge} alt="Large Printer" className="printer-large-image" />
+            <div className="printer-image-overlay"></div>
           </div>
         </div>
       </section>
