@@ -2,28 +2,20 @@ const Home = () => {
   return (
     <>
       <section className="hero">
-        <div className="hero-container">
-          <div className="hero-content">
-            <h1>
-              <span className="print-letter" style={{ color: '#FFD700' }}>P</span>
-              <span className="print-letter" style={{ color: '#FFA500' }}>r</span>
-              <span className="print-letter" style={{ color: '#FF8C00' }}>i</span>
-              <span className="print-letter" style={{ color: '#FF6347' }}>n</span>
-              <span className="print-letter" style={{ color: '#FF4500' }}>t</span>
-              <span className="print-letter" style={{ color: '#FFD700' }}> </span>
-              <span className="print-letter" style={{ color: '#ffffff' }}>without limits.</span>
-            </h1>
-            <p>Printing services, computer rentals, online appointments, and personalized gifts — all in one place.</p>
-            <div className="hero-buttons">
-              <button className="cta-button">GET A QUOTE</button>
-              <button className="cta-button" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>OUR SERVICES</button>
-            </div>
-          </div>
-          <div className="hero-image-placeholder">
-            <div className="placeholder-content">
-              <span className="placeholder-icon">🖨️</span>
-              <p>Printing Services</p>
-            </div>
+        <div className="hero-content">
+          <h1>
+            <span className="print-letter" style={{ color: '#FF4500' }}>P</span>
+            <span className="print-letter" style={{ color: '#FF6347' }}>r</span>
+            <span className="print-letter" style={{ color: '#FFD700' }}>i</span>
+            <span className="print-letter" style={{ color: '#32CD32' }}>n</span>
+            <span className="print-letter" style={{ color: '#1E90FF' }}>t</span>
+            <br />
+            <span className="print-letter" style={{ color: '#ffffff' }}>without limits.</span>
+          </h1>
+          <p>Printing services, computer rentals, online appointments, and personalized gifts — all in one place.</p>
+          <div className="hero-buttons">
+            <button className="cta-button-yellow">GET A QUOTE</button>
+            <button className="cta-button-transparent" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>OUR SERVICES</button>
           </div>
         </div>
       </section>

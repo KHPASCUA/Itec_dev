@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="navbar-logo">
           <NavLink to="/" className="navbar-logo-link">
             <div className="circular-logo-small"></div>
-            <span className="logo-text">DIANETCAFE</span>
+            <span className="logo-text"><span className="logo-yellow">DIANET</span><span className="logo-white">CAFE</span></span>
           </NavLink>
         </div>
         <button 
@@ -27,8 +27,8 @@ const Navbar = () => {
         <ul className={`navbar-menu ${isOpen ? 'open' : ''}`}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Home</NavLink></li>
           <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>About</NavLink></li>
-          <li><NavLink to="/products" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Products</NavLink></li>
-          <li><NavLink to="/testimonials" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Testimonials</NavLink></li>
+          <li><NavLink to="/products" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Services</NavLink></li>
+          <li><NavLink to="/testimonials" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Gallery</NavLink></li>
           <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact Us</NavLink></li>
         </ul>
       </div>
