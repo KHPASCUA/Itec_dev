@@ -111,6 +111,12 @@ button {
   letter-spacing: 2px;
 }
 
+.navbar-logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
 .logo-yellow {
   color: var(--yellow);
 }
@@ -1214,22 +1220,10 @@ button {
   gap: 2rem;
 }
 
-.circular-logo-footer {
+.footer-logo-image {
   width: 130px;
   height: 130px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
-  border: 3px solid var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-initials {
-  color: var(--white);
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 2px;
+  object-fit: contain;
 }
 
 .footer-logo .footer-logo-text {
@@ -1263,13 +1257,9 @@ button {
     gap: 1.5rem;
   }
 
-  .circular-logo-footer {
+  .footer-logo-image {
     width: 100px;
     height: 100px;
-  }
-
-  .logo-initials {
-    font-size: 2rem;
   }
 
   .footer-logo .footer-logo-text {

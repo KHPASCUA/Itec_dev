@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <NavLink to="/" className="navbar-logo-link">
-            <div className="circular-logo-small"></div>
+            <img src={logo} alt="DianetCafe Logo" className="navbar-logo-image" />
             <span className="logo-text"><span className="logo-yellow">DIANET</span><span className="logo-white">CAFE</span></span>
           </NavLink>
         </div>
