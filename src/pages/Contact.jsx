@@ -1,3 +1,5 @@
+import heroBg from '../assets/hero-bg.jpg'
+
 const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -5,7 +7,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="page-hero-container">
           <h1>Contact Us!</h1>
         </div>

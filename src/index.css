@@ -162,7 +162,9 @@ button {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 8rem 0 6rem 10%;
   min-height: 100vh;
   display: flex;
@@ -178,7 +180,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 70% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
   pointer-events: none;
 }
 
@@ -248,9 +250,28 @@ button {
 
 /* About Hero */
 .about-hero {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 6rem 2rem;
   text-align: center;
+  position: relative;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 1;
 }
 
 .about-hero-container {
@@ -445,20 +466,36 @@ button {
 
 /* Page Hero */
 .page-hero {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 6rem 2rem;
   text-align: center;
+  position: relative;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
 }
 
 .page-hero-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {
   font-size: 4rem;
   font-weight: 800;
-  color: var(--yellow);
+  color: var(--white);
   margin-bottom: 1.5rem;
 }
 

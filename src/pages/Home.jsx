@@ -1,7 +1,9 @@
+import heroBg from '../assets/hero-bg.jpg'
+
 const Home = () => {
   return (
     <>
-      <section className="hero">
+      <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="hero-content">
           <h1>
             <span className="print-letter" style={{ color: '#FF4500' }}>P</span>

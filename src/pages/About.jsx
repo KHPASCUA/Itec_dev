@@ -1,7 +1,9 @@
+import heroBg from '../assets/hero-bg.jpg'
+
 const About = () => {
   return (
     <>
-      <section className="about-hero">
+      <section className="about-hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="about-hero-container">
           <h1>
             <span className="about-white">About</span>

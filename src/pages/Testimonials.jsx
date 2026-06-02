@@ -1,7 +1,9 @@
+import heroBg from '../assets/hero-bg.jpg'
+
 const TestimonialsPage = () => {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="page-hero-container">
           <h1>Customers</h1>
           <p className="page-hero-description">
