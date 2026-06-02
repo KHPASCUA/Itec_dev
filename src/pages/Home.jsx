@@ -15,7 +15,7 @@ const Home = () => {
             <span className="print-letter" style={{ color: '#32CD32' }}>n</span>
             <span className="print-letter" style={{ color: '#1E90FF' }}>t</span>
             <br />
-            <span className="print-letter" style={{ color: '#ffffff' }}>without limits.</span>
+            <span className="print-letter hero-title-white" style={{ color: '#ffffff' }}>without limits.</span>
           </h1>
           <p>Printing services, computer rentals, online appointments, and personalized gifts — all in one place.</p>
           <div className="hero-buttons">
