@@ -552,7 +552,7 @@ button {
 /* Contact Page Content */
 .contact-page-content {
   background-color: var(--white);
-  padding: 4rem 2rem;
+  padding: 6rem 2rem 4rem 2rem;
 }
 
 .contact-page-container {
@@ -607,7 +607,8 @@ button {
 }
 
 .contact-icon-yellow {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: var(--yellow);
 }
 
 .contact-link-underlined {
@@ -700,7 +701,8 @@ button {
 }
 
 .social-icon-yellow {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: var(--yellow);
 }
 
 .contact-form-card {
