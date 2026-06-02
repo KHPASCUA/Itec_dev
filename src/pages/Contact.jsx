@@ -12,6 +12,7 @@ const ContactPage = () => {
       <section className="page-hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="page-hero-container">
           <h1>Contact Us!</h1>
+          <p className="page-hero-description">Get in touch with us for printing, computer services, and inquiries.</p>
         </div>
       </section>
       <section className="contact-page-content">
@@ -26,13 +27,20 @@ const ContactPage = () => {
                 </div>
                 <div className="contact-info-item">
                   <div className="contact-icon-circle">◷</div>
-                  <span>8:00 AM - 8:00 PM</span>
+                  <div className="contact-text-group">
+                    <span className="contact-label">Business Hours</span>
+                    <span className="contact-value">8:00 AM - 8:00 PM</span>
+                  </div>
                 </div>
               </div>
               
               <h2>Find us here!</h2>
               <div className="contact-card map-placeholder-white">
-                <p>GOOGLE MAPS EMBED LINK HERE</p>
+                <div className="location-card-content">
+                  <h3>DianetCafe</h3>
+                  <p>Bacoor, Cavite</p>
+                  <p>Printing and Computer Services</p>
+                </div>
               </div>
               
               <h2>Follow Us</h2>

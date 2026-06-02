@@ -591,7 +591,8 @@ button {
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 4rem;
+  align-items: start;
 }
 
 .contact-left h2 {
@@ -660,6 +661,26 @@ button {
   font-weight: 600;
 }
 
+.contact-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-label {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-value {
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .contact-card h3 {
   color: var(--black);
   font-size: 1.2rem;
@@ -705,6 +726,28 @@ button {
   color: var(--black);
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+.location-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.location-card-content h3 {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.location-card-content p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 .social-card {
@@ -775,6 +818,7 @@ button {
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: fit-content;
 }
 
 .form-header-bar {
