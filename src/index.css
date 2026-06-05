@@ -665,6 +665,7 @@ button {
   width: 430px;
   height: 360px;
   object-fit: cover;
+  object-position: left center;
   border-radius: 18px;
   display: block;
 }
