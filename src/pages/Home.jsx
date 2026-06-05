@@ -1,5 +1,4 @@
 import heroBg from '../assets/hero-bg.jpg'
-import serviceCard from '../assets/service-card.png'
 import printerLarge from '../assets/printer-large.png'
 import { Link } from 'react-router-dom'
 
@@ -35,35 +34,35 @@ const Home = () => {
           <h2>WHAT WE OFFER</h2>
           <div className="services-grid">
             <div className="service-card">
-              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-image-placeholder printing-bg"></div>
               <div className="service-card-content">
                 <h3>Printing Services</h3>
-                <p>High-quality printing for documents, photos, and more</p>
-                <a href="#" className="service-link">LEARN MORE &gt;</a>
+                <p>Document Printing, Scanning, Photo Printing, Photocopying, Rush ID, Tarpaulins and more!</p>
+                <a href="#" className="service-link">SEE MORE →</a>
               </div>
             </div>
             <div className="service-card">
-              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-image-placeholder rental-bg"></div>
               <div className="service-card-content">
                 <h3>Computer Rental</h3>
-                <p>Affordable computer rental for your computing needs</p>
-                <a href="#" className="service-link">LEARN MORE &gt;</a>
+                <p>Mid-performance PCs, web browsing, computer gaming and more!</p>
+                <a href="#" className="service-link">SEE MORE →</a>
               </div>
             </div>
             <div className="service-card">
-              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-image-placeholder gifts-bg"></div>
               <div className="service-card-content">
                 <h3>Personalized Gifts</h3>
-                <p>Custom gifts for special occasions and events</p>
-                <a href="#" className="service-link">LEARN MORE &gt;</a>
+                <p>Mugs, Keychains, T-Shirts, Personalized Pens, Notebooks, Engraved Souvenirs, Tumblers and more!</p>
+                <a href="#" className="service-link">SEE MORE →</a>
               </div>
             </div>
             <div className="service-card">
-              <img src={serviceCard} alt="Service" className="service-card-image" />
+              <div className="service-card-image-placeholder online-bg"></div>
               <div className="service-card-content">
                 <h3>Online Services</h3>
-                <p>Digital solutions for your online requirements</p>
-                <a href="#" className="service-link">LEARN MORE &gt;</a>
+                <p>NBI Clearance, DFA Passport Appointment, PhilHealth, SSS and more!</p>
+                <a href="#" className="service-link">SEE MORE →</a>
               </div>
             </div>
           </div>
@@ -77,7 +76,10 @@ const Home = () => {
               <h2>NEED SOMETHING PERSONALIZED?</h2>
               <p>We create custom designs for your gifts, souvenirs and giveaways!</p>
             </div>
-            <button className="cta-button-yellow">ORDER NOW</button>
+            <div className="cta-banner-right">
+              <button className="cta-button-yellow">CREATE ME A CUSTOMIZED!</button>
+              <p className="cta-samples-link">Don't know where to start? <span className="yellow-text">View our Samples!</span></p>
+            </div>
           </div>
         </div>
       </section>
