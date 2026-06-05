@@ -1,8 +1,8 @@
 import servicesHeroBg from '../assets/printer-large.png'
-import servicesPrinting from '../assets/printing-services.png'
-import servicesComputerRental from '../assets/computer-rental.png'
-import servicesPersonalizedGifts from '../assets/personalized-gifts.png'
-import servicesOnlineAppointments from '../assets/online-services.png'
+import servicesPrinting from '../assets/service-printing.png'
+import servicesComputerRental from '../assets/service-computer-rental.png'
+import servicesPersonalizedGifts from '../assets/service-personalized-gifts.png'
+import servicesOnlineAppointments from '../assets/service-online-assistance.png'
 
 const Services = () => {
   const servicesList = [
@@ -12,13 +12,13 @@ const Services = () => {
       description: 'We print it all in its best and finest quality. Whether it be Black & White or full color.',
       image: servicesPrinting,
       checklist: [
-        'Document',
+        'Documents',
         'Tarpaulin / Banner',
         'Invitation & Cards',
         'Stickers & Labels',
         'Photo Printing',
         'ID Picture 1x1, 2x2',
-        'Senior Board and many more',
+        'Sintra Board and many more!',
       ],
       button: 'VIEW ALL PRINTING',
     },
@@ -85,12 +85,11 @@ const Services = () => {
       <section className="services-list-section">
         <div className="services-list">
           {servicesList.map((service) => (
-            <div key={service.id} className="service-card">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="service-card-image"
-              />
+            <div
+              key={service.id}
+              className="service-card"
+              style={{ backgroundImage: `url(${service.image})` }}
+            >
               <div className="service-card-content">
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
