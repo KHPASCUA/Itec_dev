@@ -1,3 +1,71 @@
+@import "tailwindcss";
+
+/* --- CUSTOM FONTS INTEGRATION --- */
+
+/* MADE TOMMY - Thin (100) */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('./assets/fonts/MADE TOMMY Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* MADE TOMMY - Light (300) */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('./assets/fonts/MADE TOMMY Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* MADE TOMMY - Regular (400) */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('./assets/fonts/MADE TOMMY Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* MADE TOMMY - Medium (500) */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('./assets/fonts/MADE TOMMY Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* MADE TOMMY - Bold (700) */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('./assets/fonts/MADE TOMMY Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* MADE TOMMY - ExtraBold (800) */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('./assets/fonts/MADE TOMMY ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* MADE TOMMY - Black (900) */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('./assets/fonts/MADE TOMMY Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* BillionDreams - Cursive */
+@font-face {
+  font-family: 'BillionDreams';
+  src: url('./assets/fonts/BillionDreams.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --black: #000000;
   --dark-gray: #1a1a1a;
@@ -9,8 +77,17 @@
   --white: #ffffff;
   --off-white: #f5f5f5;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  /* Setting MADE TOMMY as the primary font */
+  --sans: 'MADE TOMMY', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'MADE TOMMY', system-ui, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Adding BillionDreams for cursive elements */
+  --cursive: 'BillionDreams', cursive;
+}
+
+@theme {
+  --font-sans: 'MADE TOMMY', system-ui, sans-serif;
+  --font-cursive: 'BillionDreams', cursive;
 }
 
 * {
@@ -71,19 +148,26 @@ button {
   font-family: var(--sans);
 }
 
-/* Navbar */
+/* ==================== */
+/* Navbar        */
+/* ==================== */
 .navbar {
-  background-color: var(--black);
+  /* Using a slightly transparent dark background to blend with hero images */
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px); /* Adds a premium glassy blur if scrolling over content */
   padding: 0;
   height: 90px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar-container {
+  max-width: 1400px; /* Limits width on ultra-wide screens to match design */
+  margin: 0 auto;
   width: 100%;
+  height: 100%;
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
@@ -93,28 +177,21 @@ button {
 .navbar-logo-link {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem; /* Spacing between logo image and text */
   text-decoration: none;
 }
 
-.circular-logo-small {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
-  border: 2px solid var(--yellow);
+.navbar-logo-image {
+  width: 65px; /* Sized to match screenshot proportions */
+  height: 65px;
+  object-fit: contain;
 }
 
 .navbar-logo .logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.navbar-logo-image {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+  font-family: var(--sans);
+  font-size: 1.8rem;
+  font-weight: 900; /* Uses MADE TOMMY Black for the heavy brand look */
+  letter-spacing: 1px;
 }
 
 .logo-yellow {
@@ -125,51 +202,36 @@ button {
   color: var(--white);
 }
 
-.navbar-toggle {
-  display: none;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-}
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--yellow);
-  transition: all 0.3s ease;
-}
-
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem; /* Wide spacing to match the clean design */
 }
 
 .navbar-menu li a {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  font-weight: 500; /* Uses MADE TOMMY Medium */
   color: var(--white);
-  font-weight: 500;
   transition: color 0.3s ease;
   text-decoration: none;
   position: relative;
+  padding-bottom: 6px; /* Creates physical space for the underline */
 }
 
+/* The Animated Underline */
 .navbar-menu li a::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 2px; /* Thickness of the underline */
   background-color: var(--yellow);
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
+/* Hover State */
 .navbar-menu li a:hover {
   color: var(--yellow);
 }
@@ -178,12 +240,51 @@ button {
   width: 100%;
 }
 
+/* Active Page State */
 .navbar-menu li a.active {
   color: var(--yellow);
 }
 
 .navbar-menu li a.active::after {
   width: 100%;
+}
+
+/* Mobile Hamburger Toggle */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: var(--yellow);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: var(--yellow);
 }
 
 /* Hero */

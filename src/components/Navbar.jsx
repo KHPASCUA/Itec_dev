@@ -8,12 +8,19 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
+        
+        {/* Brand & Logo */}
         <div className="navbar-logo">
-          <NavLink to="/" className="navbar-logo-link">
+          <NavLink to="/" className="navbar-logo-link" onClick={() => setIsOpen(false)}>
             <img src={logo} alt="DianetCafe Logo" className="navbar-logo-image" />
-            <span className="logo-text"><span className="logo-yellow">DIANET</span><span className="logo-white">CAFE</span></span>
+            <span className="logo-text">
+              <span className="logo-yellow">DIANET</span>
+              <span className="logo-white">CAFE</span>
+            </span>
           </NavLink>
         </div>
+
+        {/* Mobile Hamburger Menu */}
         <button 
           className="navbar-toggle" 
           onClick={() => setIsOpen(!isOpen)}
@@ -25,13 +32,36 @@ const Navbar = () => {
             <span></span>
           </span>
         </button>
+
+        {/* Navigation Links */}
         <ul className={`navbar-menu ${isOpen ? 'open' : ''}`}>
-          <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Home</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>About</NavLink></li>
-          <li><NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Services</NavLink></li>
-          <li><NavLink to="/testimonials" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Gallery</NavLink></li>
-          <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact Us</NavLink></li>
+          <li>
+            <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/gallery" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>
+              Gallery
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>
+              Contact Us
+            </NavLink>
+          </li>
         </ul>
+        
       </div>
     </nav>
   );
