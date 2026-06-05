@@ -1497,19 +1497,14 @@ button {
 
 /* Personalized Section */
 .personalized-section {
-  position: relative;
-  min-height: 760px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .personalized-section {
-    min-height: 620px;
-    background-position: center bottom;
-  }
+.personalized-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 

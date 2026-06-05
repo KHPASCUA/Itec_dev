@@ -169,10 +169,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section
-        className="personalized-section"
-        style={{ backgroundImage: `url(${personalizeBg})` }}
-      >
+      <section className="personalized-section">
+        <img src={personalizeBg} alt="Personalized Section" className="personalized-image" />
       </section>
 
       <section className="testimonials">
