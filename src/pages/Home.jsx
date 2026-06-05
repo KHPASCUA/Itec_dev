@@ -13,7 +13,6 @@ import otherInvitations from '../assets/other-invitations.png'
 import otherStickers from '../assets/other-stickers.png'
 import personalizeBg from '../assets/personalize-section.png'
 import computerRentalsBg from '../assets/computer-rentals-section.png'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -216,10 +215,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="free-quote">
-        <div className="free-quote-container">
-          <h2>GET A FREE QUOTE TODAY!</h2>
-          <Link to="/contact" className="cta-button-large">Contact Us</Link>
+      <section className="final-cta">
+        <div className="final-cta-container">
+          <h2>READY TO GET THINGS DONE?</h2>
+          <p>
+            From document and photo printing to rush IDs, tarpaulins, invitations, stickers, and computer rental services. Whatever your printing or digital service needs, our team is ready to help bring your ideas to life with quality results and excellent service.
+          </p>
+          <div className="final-cta-buttons">
+            <button className="cta-button-black">Visit Our Shop</button>
+            <button className="cta-button-outline">Create Your Order</button>
+          </div>
         </div>
       </section>
     </>
