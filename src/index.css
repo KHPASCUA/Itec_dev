@@ -647,6 +647,100 @@ button {
   display: block;
 }
 
+/* Founder Quote Section */
+.founder-quote-section {
+  background: #ffffff;
+  padding: 90px 150px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.founder-image-wrap {
+  flex: 0 0 430px;
+}
+
+.founder-image {
+  width: 430px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.founder-quote-content {
+  flex: 1;
+  text-align: center;
+}
+
+.quote-mark {
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 0.7;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.founder-quote-content h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+  color: #000;
+  font-family: Georgia, serif;
+}
+
+.founder-quote-content p {
+  margin: 22px 0 0;
+  font-size: 34px;
+  font-weight: 800;
+  color: #000;
+  font-family: Georgia, serif;
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+  background: #ffffff;
+  padding: 40px 140px 90px;
+  text-align: center;
+}
+
+.why-choose-section h2 {
+  margin: 0 0 45px;
+  font-size: 52px;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.why-card {
+  border: 2px solid #f2a900;
+  border-radius: 12px;
+  padding: 28px 22px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.why-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+}
+
+.why-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #777;
+}
+
 /* Navbar overlay for About page */
 body:has(.about-hero) .navbar {
   position: absolute;
@@ -2470,6 +2564,44 @@ body:has(.about-hero) .navbar {
     height: 390px;
   }
 
+  .founder-quote-section {
+    padding: 70px 24px;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .founder-image-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .founder-image {
+    width: 100%;
+    max-width: 360px;
+    height: 320px;
+    margin: 0 auto;
+  }
+
+  .founder-quote-content h2 {
+    font-size: 30px;
+  }
+
+  .founder-quote-content p {
+    font-size: 24px;
+  }
+
+  .why-choose-section {
+    padding: 50px 24px 70px;
+  }
+
+  .why-choose-section h2 {
+    font-size: 36px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+
   .categories-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2792,6 +2924,45 @@ body:has(.about-hero) .navbar {
     width: 100%;
     max-width: 320px;
     height: 350px;
+  }
+
+  .founder-quote-section {
+    padding: 50px 1rem 50px;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .founder-image-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .founder-image {
+    width: 100%;
+    max-width: 320px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .founder-quote-content h2 {
+    font-size: 26px;
+  }
+
+  .founder-quote-content p {
+    font-size: 20px;
+  }
+
+  .why-choose-section {
+    padding: 40px 1rem 60px;
+  }
+
+  .why-choose-section h2 {
+    font-size: 30px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .about-dianetcafe-title {

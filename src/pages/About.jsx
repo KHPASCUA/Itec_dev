@@ -11,6 +11,7 @@ import journey8 from '../assets/journey-8.png'
 import journey9 from '../assets/journey-9.png'
 import journey10 from '../assets/journey-10.png'
 import missionVisionImage from '../assets/about-mission-vision.png'
+import foundersImage from '../assets/about-founders.png'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -172,6 +173,48 @@ const About = () => {
             alt="Dianetcafe mission and vision"
             className="mission-vision-image"
           />
+        </div>
+      </section>
+
+      <section className="founder-quote-section">
+        <div className="founder-image-wrap">
+          <img
+            src={foundersImage}
+            alt="Dianetcafe founders"
+            className="founder-image"
+          />
+        </div>
+
+        <div className="founder-quote-content">
+          <div className="quote-mark">"</div>
+          <h2>Study Hard, Play Harder</h2>
+          <p>-luntiangpp</p>
+        </div>
+      </section>
+
+      <section className="why-choose-section">
+        <h2>WHY CHOOSE US?</h2>
+
+        <div className="why-choose-grid">
+          <div className="why-card">
+            <h3>Reliable Services</h3>
+            <p>We provide dependable printing, computer rental, and customized services for everyday needs.</p>
+          </div>
+
+          <div className="why-card">
+            <h3>Customer Focused</h3>
+            <p>We assist every customer with hands-on support and friendly service.</p>
+          </div>
+
+          <div className="why-card">
+            <h3>Quality Output</h3>
+            <p>We deliver clean, creative, and high-quality outputs for personal and business use.</p>
+          </div>
+
+          <div className="why-card">
+            <h3>Trusted Locally</h3>
+            <p>Dianetcafe has served the Bacoor community for many years as a reliable local hub.</p>
+          </div>
         </div>
       </section>
 
