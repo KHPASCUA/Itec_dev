@@ -1,9 +1,9 @@
 import heroBg from '../assets/hero-bg.jpg'
-import printerLarge from '../assets/printer-large.png'
 import printingImg from '../assets/printing-services.png'
 import computerImg from '../assets/computer-rental.png'
 import giftsImg from '../assets/personalized-gifts.png'
 import onlineImg from '../assets/online-services.png'
+import printerLarge from '../assets/printer-large.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -105,13 +105,31 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="printer-image-section">
-        <div className="printer-image-container">
-          <div className="printer-image-wrapper">
-            <img src={printerLarge} alt="Large Printer" className="printer-large-image" />
-            <div className="printer-image-overlay"></div>
-          </div>
+      <section
+        className="tarpaulin-section"
+        style={{ backgroundImage: `url(${printerLarge})` }}
+      >
+        <div className="tarpaulin-content">
+          <h1>TARPAULIN</h1>
+          <h3>Printing Services</h3>
+
+          <p>
+            Need a tarpaulin that truly reflects your idea? We handle everything
+            from layout assistance to final printing, ensuring your tarpaulin
+            matches your vision. Perfect for entrepreneurs, students,
+            organizations, and families who want quality without the stress.
+          </p>
+
+          <p>
+            From store signage to large-scale event backdrops, Dianetcafe delivers
+            bold colors, crisp text, and professional finishing that attracts
+            attention and drives engagement.
+          </p>
+
+          <button>View Price</button>
         </div>
+
+        <h2 className="tarpaulin-bg-text">Tarpaulin</h2>
       </section>
 
       <section className="features">
