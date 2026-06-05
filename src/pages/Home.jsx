@@ -14,26 +14,32 @@ import otherStickers from '../assets/other-stickers.png'
 import personalizeBg from '../assets/personalize-section.png'
 import computerRentalsBg from '../assets/computer-rentals-section.png'
 
+
 const Home = () => {
   return (
     <>
       <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="hero-content">
           <h1>
-            <span className="print-letter" style={{ color: '#FF4500' }}>P</span>
-            <span className="print-letter" style={{ color: '#FF6347' }}>r</span>
-            <span className="print-letter" style={{ color: '#FFD700' }}>i</span>
-            <span className="print-letter" style={{ color: '#32CD32' }}>n</span>
-            <span className="print-letter" style={{ color: '#1E90FF' }}>t</span>
+            {/* Split into individual spans for per-letter vertical gradients */}
+            <span className="print-word">
+              <span className="print-letter letter-p">P</span>
+              <span className="print-letter letter-r">r</span>
+              <span className="print-letter letter-i">i</span>
+              <span className="print-letter letter-n">n</span>
+              <span className="print-letter letter-t">t</span>
+            </span>
             <br />
-            <span className="print-letter hero-title-white" style={{ color: '#ffffff' }}>without limits.</span>
+            <span className="hero-title-white">without limits.</span>
           </h1>
-          <p>Printing services, computer rentals, online appointments, and personalized gifts — all in one place.</p>
+          <p className="hero-subtitle">Printing services, computer rentals, online appointments,<br/>and personalized gifts — all in one place.</p>
           <div className="hero-buttons">
             <button className="cta-button-yellow">GET STARTED</button>
             <button className="cta-button-transparent" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>OUR SERVICES</button>
           </div>
         </div>
+        
+        {/* Optional: Kept your original bottom arrow, you can remove if not needed in new design */}
         <div className="hero-bottom">
           <div className="hero-line"></div>
           <div className="hero-arrow">↓</div>
