@@ -1,9 +1,42 @@
 import heroBg from '../assets/hero-bg.jpg'
 import logo from '../assets/logo.png'
-import journeyImage from '../assets/hero-bg.jpg'
+import journey1 from '../assets/journey-1.png'
+import journey2 from '../assets/journey-2.png'
+import journey3 from '../assets/journey-3.png'
+import journey4 from '../assets/journey-4.png'
+import journey5 from '../assets/journey-5.png'
+import journey6 from '../assets/journey-6.png'
+import journey7 from '../assets/journey-7.png'
+import journey8 from '../assets/journey-8.png'
+import journey9 from '../assets/journey-9.png'
+import journey10 from '../assets/journey-10.png'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+
+const journeyImages = [
+  journey1,
+  journey2,
+  journey3,
+  journey4,
+  journey5,
+  journey6,
+  journey7,
+  journey8,
+  journey9,
+  journey10,
+]
 
 const About = () => {
+  const [journeyIndex, setJourneyIndex] = useState(0)
+
+  const handlePrevImage = () => {
+    setJourneyIndex((prev) => (prev === 0 ? journeyImages.length - 1 : prev - 1))
+  }
+
+  const handleNextImage = () => {
+    setJourneyIndex((prev) => (prev === journeyImages.length - 1 ? 0 : prev + 1))
+  }
+
   return (
     <>
       <section className="about-hero" style={{ backgroundImage: `url(${heroBg})` }}>
@@ -47,10 +80,10 @@ const About = () => {
 
         <div className="journey-content">
           <div className="journey-image-wrap">
-            <img src={journeyImage} alt="Dianetcafe Journey" className="journey-image" />
+            <img src={journeyImages[journeyIndex]} alt="Dianetcafe journey" className="journey-image" />
 
-            <button className="journey-arrow journey-arrow-left">‹</button>
-            <button className="journey-arrow journey-arrow-right">›</button>
+            <button className="journey-arrow journey-arrow-left" onClick={handlePrevImage}>‹</button>
+            <button className="journey-arrow journey-arrow-right" onClick={handleNextImage}>›</button>
           </div>
 
           <div className="journey-timeline">
