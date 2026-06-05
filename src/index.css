@@ -2539,18 +2539,16 @@ body:has(.services-hero) .navbar {
 
 .service-card {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 48% 52%;
   align-items: stretch;
-  background: #111111;
+  background: #101010;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 2px;
   overflow: hidden;
   min-height: 260px;
+  max-width: 1100px;
+  margin: 0 auto;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
-}
-
-.service-card:hover {
-  border-color: rgba(255, 212, 0, 0.45);
 }
 
 .service-card-image {
