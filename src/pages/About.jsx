@@ -14,6 +14,7 @@ import missionVisionImage from '../assets/about-mission-vision.png'
 import foundersImage from '../assets/about-founders.png'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { FaRegHeart, FaRegUser, FaAward, FaFastForward } from 'react-icons/fa'
 
 const journeyImages = [
   journey1,
@@ -197,33 +198,24 @@ const About = () => {
 
         <div className="why-choose-grid">
           <div className="why-card">
-            <h3>Reliable Services</h3>
-            <p>We provide dependable printing, computer rental, and customized services for everyday needs.</p>
+            <FaRegHeart className="why-icon" />
+            <p>Quality Products</p>
           </div>
 
           <div className="why-card">
-            <h3>Customer Focused</h3>
-            <p>We assist every customer with hands-on support and friendly service.</p>
+            <FaRegUser className="why-icon" />
+            <p>Satisfied Customers</p>
           </div>
 
           <div className="why-card">
-            <h3>Quality Output</h3>
-            <p>We deliver clean, creative, and high-quality outputs for personal and business use.</p>
+            <FaAward className="why-icon" />
+            <p>Premium Materials</p>
           </div>
 
           <div className="why-card">
-            <h3>Trusted Locally</h3>
-            <p>Dianetcafe has served the Bacoor community for many years as a reliable local hub.</p>
+            <FaFastForward className="why-icon" />
+            <p>Quick Service</p>
           </div>
-        </div>
-      </section>
-
-      <section className="about-cta">
-        <div className="about-cta-container">
-          <h2>BE OUR NEXT PARTNER!</h2>
-          <Link to="/contact" className="cta-button-white">
-            Contact Us
-          </Link>
         </div>
       </section>
     </>
