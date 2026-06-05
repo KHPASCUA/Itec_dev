@@ -88,47 +88,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="rush-id-section">
-        <div className="rush-id-container">
-          <div className="rush-id-images">
-            <div className="id-card id-card-back">
-              <div className="id-card-placeholder woman-id"></div>
-            </div>
-            <div className="id-card id-card-front">
-              <div className="id-card-placeholder man-id"></div>
-            </div>
-          </div>
-          <div className="rush-id-content">
-            <h1>RUSH ID</h1>
-            <h3>Printing Services</h3>
-            <p>
-              Need your ID picture urgently? We offer rush ID printing services with professional quality and fast turnaround. Perfect for students, professionals, and anyone who needs their ID picture done quickly without compromising on quality.
-            </p>
-            <p>
-              Our rush ID service includes high-resolution printing, proper sizing for various ID requirements, and professional finishing. Get your ID ready in minutes, not hours!
-            </p>
-            <button className="rush-id-button">Get Rush ID Now</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="other-printing-services">
-        <div className="other-printing-container">
-          <h2>OTHER PRINTING SERVICES</h2>
-          <div className="categories-grid">
-            <div className="category-box"><h3>ID PICTURE</h3></div>
-            <div className="category-box"><h3>DOCUMENTS</h3></div>
-            <div className="category-box"><h3>TARPAULIN</h3></div>
-            <div className="category-box"><h3>PHOTO PRINT</h3></div>
-            <div className="category-box"><h3>INVITATIONS</h3></div>
-            <div className="category-box"><h3>STICKERS</h3></div>
-          </div>
-          <div className="view-all-container">
-            <button className="cta-button-yellow">VIEW ALL SERVICES</button>
-          </div>
-        </div>
-      </section>
-
       <section
         className="tarpaulin-section"
         style={{ backgroundImage: `url(${printerLarge})` }}
@@ -156,43 +115,43 @@ const Home = () => {
         <h2 className="tarpaulin-bg-text">Tarpaulin</h2>
       </section>
 
-      <section className="features">
-        <div className="features-container">
-          <div className="features-grid">
-            <div className="feature-card">
-              <h3>Quality Products</h3>
-              <p>Premium quality materials and output</p>
+      <section className="rush-id-section">
+        <div className="rush-id-container">
+          <div className="rush-id-images">
+            <div className="id-card id-card-back">
+              <div className="id-card-placeholder woman-id"></div>
             </div>
-            <div className="feature-card">
-              <h3>Satisfied Customers</h3>
-              <p>Thousands of happy clients served</p>
+            <div className="id-card id-card-front">
+              <div className="id-card-placeholder man-id"></div>
             </div>
-            <div className="feature-card">
-              <h3>Premium Materials</h3>
-              <p>Only the best materials used</p>
-            </div>
-            <div className="feature-card">
-              <h3>Quick Service</h3>
-              <p>Fast turnaround for all orders</p>
-            </div>
+          </div>
+          <div className="rush-id-content">
+            <h1>RUSH ID</h1>
+            <h3>Printing Services</h3>
+            <p>
+              Whether it's for school, work, or events, our Rush ID service ensures professional-looking identification produced quickly and accurately. Dianetcafe combines efficient processing with reliable printing so you can meet deadlines with confidence.
+            </p>
+            <p>
+              Forgotten deadlines? Last-minute requirements? We are built for urgent needs. From single IDs to small batches, we deliver fast turnaround with a polished, official appearance.
+            </p>
+            <button className="rush-id-button">Get Rush ID Now</button>
           </div>
         </div>
       </section>
 
-      <section className="gallery">
-        <div className="gallery-container">
-          <h2>AVAIL OUR PRODUCTS!</h2>
-          <div className="products-grid">
-            <div className="product-card">
-              <h3>Custom T-Shirt Printing</h3>
-              <p>Personalized t-shirts for events and promotions</p>
-              <span className="product-price">Starting at ₱250</span>
-            </div>
-            <div className="product-card">
-              <h3>Business Card Printing</h3>
-              <p>Professional business cards for your brand</p>
-              <span className="product-price">Starting at ₱500</span>
-            </div>
+      <section className="other-printing-services">
+        <div className="other-printing-container">
+          <h2>OTHER PRINTING SERVICES</h2>
+          <div className="categories-grid">
+            <div className="category-box"><h3>ID PICTURE</h3></div>
+            <div className="category-box"><h3>DOCUMENTS</h3></div>
+            <div className="category-box"><h3>TARPAULIN</h3></div>
+            <div className="category-box"><h3>PHOTO PRINT</h3></div>
+            <div className="category-box"><h3>INVITATIONS</h3></div>
+            <div className="category-box"><h3>STICKERS</h3></div>
+          </div>
+          <div className="view-all-container">
+            <button className="cta-button-yellow">VIEW ALL SERVICES</button>
           </div>
         </div>
       </section>
