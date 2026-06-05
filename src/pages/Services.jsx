@@ -1,8 +1,8 @@
 import servicesHeroBg from '../assets/printer-large.png'
-import servicesPrinting from '../assets/services-printing.png'
-import servicesComputerRental from '../assets/services-computer-rental.png'
-import servicesPersonalizedGifts from '../assets/services-personalized-gifts.png'
-import servicesOnlineAppointments from '../assets/services-online-appointments.png'
+import servicesPrinting from '../assets/printing-services.png'
+import servicesComputerRental from '../assets/computer-rental.png'
+import servicesPersonalizedGifts from '../assets/personalized-gifts.png'
+import servicesOnlineAppointments from '../assets/online-services.png'
 
 const Services = () => {
   const servicesList = [
