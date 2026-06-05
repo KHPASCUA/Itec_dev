@@ -6,6 +6,7 @@ import About from './pages/About'
 import Products from './pages/Products'
 import Testimonials from './pages/Testimonials'
 import Contact from './pages/Contact'
+import Services from './pages/Services'
 import './index.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
       </div>
