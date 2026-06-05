@@ -48,7 +48,6 @@ const Home = () => {
 
       <section id="services" className="services">
         <div className="services-container">
-          <div className="services-arrow">↓</div>
           <h2>WHAT WE OFFER</h2>
           <div className="services-grid">
             <div className="service-card">
