@@ -1,5 +1,9 @@
 import heroBg from '../assets/hero-bg.jpg'
 import printerLarge from '../assets/printer-large.png'
+import printingImg from '../assets/printing-services.png'
+import computerImg from '../assets/computer-rental.png'
+import giftsImg from '../assets/personalized-gifts.png'
+import onlineImg from '../assets/online-services.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -34,7 +38,7 @@ const Home = () => {
           <h2>WHAT WE OFFER</h2>
           <div className="services-grid">
             <div className="service-card">
-              <div className="service-card-image-placeholder printing-bg"></div>
+              <img src={printingImg} alt="Printing Services" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Printing Services</h3>
                 <p>Document Printing, Scanning, Photo Printing, Photocopying, Rush ID, Tarpaulins and more!</p>
@@ -42,7 +46,7 @@ const Home = () => {
               </div>
             </div>
             <div className="service-card">
-              <div className="service-card-image-placeholder rental-bg"></div>
+              <img src={computerImg} alt="Computer Rental" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Computer Rental</h3>
                 <p>Mid-performance PCs, web browsing, computer gaming and more!</p>
@@ -50,7 +54,7 @@ const Home = () => {
               </div>
             </div>
             <div className="service-card">
-              <div className="service-card-image-placeholder gifts-bg"></div>
+              <img src={giftsImg} alt="Personalized Gifts" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Personalized Gifts</h3>
                 <p>Mugs, Keychains, T-Shirts, Personalized Pens, Notebooks, Engraved Souvenirs, Tumblers and more!</p>
@@ -58,7 +62,7 @@ const Home = () => {
               </div>
             </div>
             <div className="service-card">
-              <div className="service-card-image-placeholder online-bg"></div>
+              <img src={onlineImg} alt="Online Services" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Online Services</h3>
                 <p>NBI Clearance, DFA Passport Appointment, PhilHealth, SSS and more!</p>

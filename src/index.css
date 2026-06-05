@@ -1006,26 +1006,11 @@ button {
   border-color: var(--yellow);
 }
 
-.service-card-image-placeholder {
+.service-card-image {
   width: 100%;
   height: 210px;
+  object-fit: cover;
   display: block;
-}
-
-.printing-bg {
-  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
-}
-
-.rental-bg {
-  background: linear-gradient(135deg, #45B7D1 0%, #96CEB4 100%);
-}
-
-.gifts-bg {
-  background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
-}
-
-.online-bg {
-  background: linear-gradient(135deg, #6C5CE7 0%, #A29BFE 100%);
 }
 
 .service-card-content {
