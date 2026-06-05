@@ -328,13 +328,15 @@ button {
 /* About Hero */
 .about-hero {
   background-size: cover;
-  background-position: center right;
+  background-position: center;
   background-repeat: no-repeat;
-  padding: 0 0 0 18%;
-  min-height: 400px;
+  min-height: 640px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
+  padding-top: 250px;
+  padding-left: 140px;
+  padding-right: 2rem;
 }
 
 .about-hero::before {
@@ -344,7 +346,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.4) 100%);
   pointer-events: none;
 }
 
@@ -356,9 +358,10 @@ button {
 }
 
 .about-hero h1 {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 90px;
+  font-weight: 900;
   margin-bottom: 1.5rem;
+  line-height: 1;
 }
 
 .about-white {
@@ -370,11 +373,11 @@ button {
 }
 
 .about-hero-description {
-  font-size: 1.25rem;
+  font-size: 21px;
   color: var(--off-white);
-  max-width: 850px;
+  max-width: 750px;
   margin: 0;
-  line-height: 1.8;
+  line-height: 1.4;
 }
 
 /* About Content Section */
@@ -406,6 +409,14 @@ button {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+}
+
+.about-dianetcafe-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--yellow);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
 .about-text-left p,
@@ -2132,13 +2143,23 @@ button {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .about-hero {
+    padding: 200px 1.5rem 2rem;
+    min-height: 500px;
+    padding-left: 1.5rem;
+  }
+
   .about-hero h1 {
     font-size: 3rem;
   }
 
-  .about-hero {
-    padding: 0 0 0 10%;
-    min-height: 350px;
+  .about-hero-description {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+
+  .about-dianetcafe-title {
+    font-size: 2.5rem;
   }
 
   .about-text-left h2,
@@ -2262,12 +2283,21 @@ button {
   }
 
   .about-hero {
-    padding: 0 0 0 5%;
-    min-height: 300px;
+    padding: 180px 1rem 2rem;
+    min-height: 450px;
+    padding-left: 1rem;
   }
 
   .about-hero h1 {
     font-size: 2.5rem;
+  }
+
+  .about-hero-description {
+    font-size: 1rem;
+  }
+
+  .about-dianetcafe-title {
+    font-size: 2rem;
   }
 
   .about-text-left h2,

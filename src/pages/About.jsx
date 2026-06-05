@@ -12,7 +12,7 @@ const About = () => {
             <span className="about-yellow"> Us</span>
           </h1>
           <p className="about-hero-description">
-            More than just ink on paper. We are your creative partners, dedicated to delivering premium, 
+            More than just ink on paper. We are your creative partners, dedicated to delivering premium,
             precision-crafted prints with lightning-fast turnaround times.
           </p>
         </div>
@@ -22,15 +22,12 @@ const About = () => {
         <div className="about-content-container">
           <div className="about-row">
             <div className="about-text-left">
-              <h2>Our Story</h2>
+              <h2 className="about-dianetcafe-title">Dianetcafe</h2>
               <p>
-                Founded in 2020, DianetCafe has been providing professional printing and computer services 
-                with passion and dedication. We believe in quality, efficiency, and creating excellent 
-                experiences for every customer.
+                Established in the year 2000, Dianetcafe has proudly served the Bacoor City community with excellence and dedication. For over two decades, we have been the trusted partner for printing and computer services, helping businesses and individuals bring their ideas to life.
               </p>
               <p>
-                Our services include high-quality printing, computer rentals, personalized gifts, and online 
-                solutions. Every project tells a story of craftsmanship and commitment to excellence.
+                Our commitment to quality, efficiency, and customer satisfaction has made us a cornerstone of the local community. From document printing to computer rentals, personalized gifts to online solutions, we offer comprehensive services tailored to meet your needs.
               </p>
             </div>
             <div className="about-logo-right">
