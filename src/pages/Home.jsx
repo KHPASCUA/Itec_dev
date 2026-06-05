@@ -12,6 +12,7 @@ import otherPhotoPrint from '../assets/other-photo-print.png'
 import otherInvitations from '../assets/other-invitations.png'
 import otherStickers from '../assets/other-stickers.png'
 import personalizeBg from '../assets/personalize-section.png'
+import computerRentalsBg from '../assets/computer-rentals-section.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -171,6 +172,25 @@ const Home = () => {
 
       <section className="personalized-section">
         <img src={personalizeBg} alt="Personalized Section" className="personalized-image" />
+      </section>
+
+      <section className="computer-rentals-section">
+        <div className="computer-rentals-container">
+          <div className="computer-rentals-image">
+            <img src={computerRentalsBg} alt="Computer Rentals" className="computer-rentals-bg" />
+          </div>
+          <div className="pricing-card">
+            <h2>COMPUTER RENTALS</h2>
+            <p>
+              Need a place to play or take a break for a few hours? Our gaming computers are ready when you are. With responsive performance and convenient rental options, you can focus on playing while we handle the rest.
+            </p>
+            <div className="pricing-divider"></div>
+            <h3>HOURLY RATE</h3>
+            <div className="price-bar">₱20 PER HOUR</div>
+            <div className="price-bar">₱10 PER HALF HOUR</div>
+            <p className="price-note">Same rate for member and non-member.</p>
+          </div>
+        </div>
       </section>
 
       <section className="testimonials">
