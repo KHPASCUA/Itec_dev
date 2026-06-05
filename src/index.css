@@ -1495,6 +1495,87 @@ button {
   }
 }
 
+/* Personalized Section */
+.personalized-section {
+  position: relative;
+  min-height: 760px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  padding: 95px 0 0 120px;
+  overflow: hidden;
+}
+
+.personalized-content {
+  position: relative;
+  z-index: 2;
+}
+
+.personalized-small {
+  font-size: 42px;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 5px;
+}
+
+.personalized-content h2 {
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 900;
+  color: #000;
+  margin: 0;
+  line-height: 0.95;
+}
+
+.personalized-content h1 {
+  font-size: clamp(85px, 8vw, 145px);
+  font-weight: 900;
+  color: #f5b800;
+  margin: 10px 0 25px;
+  line-height: 0.9;
+  font-family: "Brush Script MT", "Pacifico", cursive;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.18);
+}
+
+.personalized-content button {
+  width: 220px;
+  height: 58px;
+  border: 2px solid #e5a400;
+  border-radius: 8px;
+  background: transparent;
+  color: #e5a400;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.personalized-content button:hover {
+  background: #ffd400;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .personalized-section {
+    min-height: 620px;
+    padding: 70px 24px;
+    background-position: center bottom;
+  }
+
+  .personalized-small {
+    font-size: 30px;
+  }
+
+  .personalized-content h2 {
+    font-size: 44px;
+  }
+
+  .personalized-content h1 {
+    font-size: 72px;
+  }
+}
+
 
 /* Features */
 .features {

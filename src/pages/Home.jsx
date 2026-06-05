@@ -11,6 +11,7 @@ import otherDocuments from '../assets/other-documents.png'
 import otherPhotoPrint from '../assets/other-photo-print.png'
 import otherInvitations from '../assets/other-invitations.png'
 import otherStickers from '../assets/other-stickers.png'
+import personalizeBg from '../assets/personalize-section.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -165,6 +166,18 @@ const Home = () => {
           <div className="view-all-container">
             <button className="view-all-button">VIEW ALL PRINTING SERVICES</button>
           </div>
+        </div>
+      </section>
+
+      <section
+        className="personalized-section"
+        style={{ backgroundImage: `url(${personalizeBg})` }}
+      >
+        <div className="personalized-content">
+          <p className="personalized-small">In here,</p>
+          <h2>we have it all</h2>
+          <h1>Personalized</h1>
+          <button>FIND OUT MORE</button>
         </div>
       </section>
 
