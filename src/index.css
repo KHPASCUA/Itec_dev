@@ -152,15 +152,17 @@ button {
 /* Navbar        */
 /* ==================== */
 .navbar {
-  /* Using a slightly transparent dark background to blend with hero images */
-  background-color: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px); /* Adds a premium glassy blur if scrolling over content */
+  /* Starts fully transparent to sit directly on top of the hero image */
+  background-color: transparent;
   padding: 0;
   height: 90px;
-  position: sticky;
+  position: fixed; /* Changed to fixed so hero sits behind it */
+  width: 100%;
   top: 0;
+  left: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: none;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
 }
 
 .navbar-container {
@@ -187,10 +189,18 @@ button {
   object-fit: contain;
 }
 
+/* The class applied when scrolling down */
+.navbar.scrolled {
+  background-color: rgba(9, 9, 9, 0.95); /* Extremely dark, slightly transparent */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .navbar-logo .logo-text {
   font-family: var(--sans);
   font-size: 1.8rem;
-  font-weight: 900; /* Uses MADE TOMMY Black for the heavy brand look */
+  font-weight: 700; /* MADE TOMMY Bold */
   letter-spacing: 1px;
 }
 
@@ -211,12 +221,11 @@ button {
 .navbar-menu li a {
   font-family: var(--sans);
   font-size: 1.1rem;
-  font-weight: 500; /* Uses MADE TOMMY Medium */
-  color: var(--white);
+  font-weight: 400; /* MADE TOMMY Regular */
+  color: #EDEDED;
   transition: color 0.3s ease;
-  text-decoration: none;
   position: relative;
-  padding-bottom: 6px; /* Creates physical space for the underline */
+  padding-bottom: 6px;
 }
 
 /* The Animated Underline */
@@ -292,7 +301,7 @@ button {
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  padding: 0 0 0 10%;
+  padding: 0 0 0 8%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -301,57 +310,102 @@ button {
 }
 
 .hero-content {
-  max-width: 760px;
+  max-width: 800px;
   position: relative;
   z-index: 1;
-  margin-top: -5vh;
+  margin-top: 5vh; 
 }
 
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.35) 100%);
+  inset: 0;
+  /* #090909 fading out to transparent on the right */
+  background: linear-gradient(90deg, #090909 0%, #090909 35%, rgba(9, 9, 9, 0.6) 60%, transparent 100%);
   pointer-events: none;
 }
 
 .hero-content {
-  max-width: 760px;
+  max-width: 800px;
   position: relative;
   z-index: 1;
+  margin-top: 5vh; /* Adjusted to account for fixed navbar */
 }
 
 .hero-content h1 {
-  font-size: clamp(5rem, 8vw, 7rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  color: var(--white);
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+/* The colorful cursive 'Print' */
+.print-word {
+  display: inline-flex; 
+  margin-bottom: -20px; 
 }
 
 .print-letter {
+  font-family: var(--cursive);
+  font-weight: 400; /* BillionDreams Regular */
+  font-size: clamp(7.5rem, 14vw, 13rem);
+  line-height: 1.1; 
+  
+  /* CRITICAL FIX FOR HORIZONTAL CROPPING:
+     We are now expanding the padding on the Left and Right by 25px to catch the overlapping cursive tails, 
+     and pulling them perfectly back together with negative margins. */
+  padding: 20px 25px 40px 25px; /* Top, Right, Bottom, Left */
+  margin: -20px -25px -40px -25px; 
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  
   display: inline-block;
 }
 
-.hero-title-white {
-  font-size: clamp(4.5rem, 6.5vw, 6rem);
-  white-space: nowrap;
+.letter-t {
+  padding-right: 60px;
+  margin-right: -60px;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  color: var(--off-white);
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
-  max-width: 650px;
+.letter-p { background-image: linear-gradient(180deg, #ff1a1a 15%, #ffffff 85%); }
+.letter-r { background-image: linear-gradient(180deg, #ff8c00 15%, #ffffff 85%); }
+.letter-i { background-image: linear-gradient(180deg, #eab308 15%, #ffffff 85%); }
+.letter-n { background-image: linear-gradient(180deg, #4ade80 15%, #ffffff 85%); }
+.letter-t { background-image: linear-gradient(180deg, #3b82f6 15%, #ffffff 85%); }
+
+.hero-title-white {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(3.5rem, 6.5vw, 5.8rem);
+  color: #EDEDED;
+  letter-spacing: -2px; /* Tighter letter spacing */
+  line-height: 0.9; 
+  display: block;
+}
+
+.hero-subtitle {
+  font-family: var(--sans);
+  font-weight: 400; /* MADE TOMMY Regular */
+  font-size: 1.05rem; /* Slightly smaller text */
+  color: #EDEDED;
+  margin-top: 1rem;
+  margin-bottom: 1.8rem; /* Tighter gap before buttons */
+  line-height: 1.4; 
+  letter-spacing: 0.3px; /* Slightly wider tracking for the subtitle */
+  max-width: 500px; 
+}
+
+.hero-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  margin-top: 5vh; 
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem; 
 }
 
 .hero-bottom {
@@ -392,38 +446,50 @@ button {
   }
 }
 
-.cta-button-yellow {
-  background-color: var(--yellow);
-  color: var(--black);
-  border: none;
-  padding: 1.2rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.cta-button-yellow,
+.cta-button-transparent {
+  font-family: var(--sans);
+  padding: 0.8rem 2.2rem; /* Sleeker: shorter vertically, wider horizontally */
+  font-size: 0.9rem; /* Smaller text */
+  font-weight: 500; /* MADE TOMMY Medium */
+  border-radius: 5px; /* Sharper corners to match prototype */
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.cta-button-yellow:hover {
-  background-color: var(--yellow-dark);
-  transform: translateY(-2px);
+.cta-button-yellow {
+  background-color: #ffe600; /* Brighter, more neon yellow */
+  color: #090909; 
+  border: 2px solid #ffe600;
 }
 
 .cta-button-transparent {
   background-color: transparent;
+  color: #ffe600; /* Brighter yellow border/text */
+  border: 2px solid #ffe600;
+}
+
+.cta-button-yellow:hover {
+  background-color: #e6cf00;
+  border-color: #e6cf00;
+}
+
+.cta-button-transparent {
+  font-family: var(--sans);
+  background-color: transparent;
   color: var(--yellow);
   border: 2px solid var(--yellow);
-  padding: 1.2rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 500; /* MADE TOMMY Medium */
+  border-radius: 8px; 
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .cta-button-transparent:hover {
-  background-color: rgba(255, 215, 0, 0.1);
-  transform: translateY(-2px);
+  background-color: rgba(255, 230, 0, 0.1);
 }
 
 /* About Hero */
@@ -2727,9 +2793,10 @@ body:has(.services-hero) .navbar {
     font-size: 2rem;
   }
 
-  .hero-content h1 {
-    font-size: 4rem;
-  }
+.hero-content h1 {
+  margin-bottom: 1.2rem;
+  line-height: 1;
+}
 
   .hero {
     padding: 0 0 0 8%;
