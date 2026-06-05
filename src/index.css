@@ -392,6 +392,83 @@ button {
   padding: 90px 140px;
 }
 
+/* About Story Section */
+.about-story-section {
+  position: relative;
+  background: #ffffff;
+  padding: 110px 140px 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  min-height: 650px;
+}
+
+.about-story-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 28px;
+  background: #f5a800;
+}
+
+.about-story-content {
+  flex: 0 0 55%;
+  max-width: 680px;
+}
+
+.about-story-title {
+  font-size: 84px;
+  font-weight: 900;
+  line-height: 1;
+  color: #f5a800;
+  margin: 0 0 12px;
+  text-transform: none;
+}
+
+.about-story-line {
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 18px;
+}
+
+.about-story-text {
+  color: #707070;
+  font-size: 18px;
+  line-height: 1.32;
+  text-align: justify;
+  margin: 0 0 24px;
+}
+
+.about-story-text strong {
+  font-weight: 700;
+}
+
+.about-story-highlight {
+  color: #f5a800;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 500;
+  margin-top: 24px;
+}
+
+.about-story-logo-wrap {
+  flex: 0 0 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-story-logo {
+  width: 520px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 /* Navbar overlay for About page */
 body:has(.about-hero) .navbar {
   position: absolute;
@@ -2183,6 +2260,32 @@ body:has(.about-hero) .navbar {
     padding: 60px 1.5rem;
   }
 
+  .about-story-section {
+    padding: 70px 24px 70px;
+    flex-direction: column;
+    gap: 40px;
+    min-height: auto;
+  }
+
+  .about-story-content,
+  .about-story-logo-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .about-story-title {
+    font-size: 52px;
+  }
+
+  .about-story-text,
+  .about-story-highlight {
+    font-size: 16px;
+  }
+
+  .about-story-logo {
+    width: 320px;
+  }
+
   .about-dianetcafe-title {
     font-size: 2.5rem;
   }
@@ -2329,6 +2432,32 @@ body:has(.about-hero) .navbar {
 
   .about-content-section {
     padding: 50px 1rem;
+  }
+
+  .about-story-section {
+    padding: 50px 1rem 50px;
+    flex-direction: column;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .about-story-content,
+  .about-story-logo-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .about-story-title {
+    font-size: 42px;
+  }
+
+  .about-story-text,
+  .about-story-highlight {
+    font-size: 15px;
+  }
+
+  .about-story-logo {
+    width: 280px;
   }
 
   .about-dianetcafe-title {

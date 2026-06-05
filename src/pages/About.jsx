@@ -18,44 +18,26 @@ const About = () => {
         </div>
       </section>
 
-      <section className="about-content-section">
-        <div className="about-content-container">
-          <div className="about-row">
-            <div className="about-text-left">
-              <h2 className="about-dianetcafe-title">Dianetcafe</h2>
-              <p>
-                Established in the year 2000, Dianetcafe has proudly served the Bacoor City community with excellence and dedication. For over two decades, we have been the trusted partner for printing and computer services, helping businesses and individuals bring their ideas to life.
-              </p>
-              <p>
-                Our commitment to quality, efficiency, and customer satisfaction has made us a cornerstone of the local community. From document printing to computer rentals, personalized gifts to online solutions, we offer comprehensive services tailored to meet your needs.
-              </p>
-            </div>
-            <div className="about-logo-right">
-              <img src={logo} alt="DianetCafe Logo" className="about-logo-image" />
-            </div>
-          </div>
+      <section className="about-story-section">
+        <div className="about-story-content">
+          <h2 className="about-story-title">Dianetcafe</h2>
+          <div className="about-story-line"></div>
 
-          <div className="about-row">
-            <div className="about-collage-left">
-              <div className="collage-placeholder-white">
-                <div className="collage-content">
-                  <span className="collage-icon">🖨️</span>
-                  <p>Our Work Gallery</p>
-                </div>
-              </div>
-            </div>
-            <div className="about-text-right">
-              <h2>Our Mission</h2>
-              <p>
-                Whether you need printing services, computer access, or personalized items, DianetCafe is 
-                your trusted partner for all your needs.
-              </p>
-              <p>
-                We strive to exceed expectations with every project, delivering exceptional quality and 
-                service that keeps our customers coming back.
-              </p>
-            </div>
-          </div>
+          <p className="about-story-text">
+            Established in the year <strong>2000</strong>, Dianetcafe has proudly served the Bacoor City community for over two decades as a trusted, multi-service local business. What started as a humble internet shop has continuously evolved into a comprehensive hub specializing in high-performance computer rentals, professional printing, and essential online appointment assistance. Throughout its long history, the shop has remained a reliable staple for local residents, senior citizens, and students who depend on its accessible digital services.
+          </p>
+
+          <p className="about-story-text">
+            Beyond its core technical offerings, the shop has built a strong reputation for crafting a wide variety of high-quality personalized gifts and custom giveaways tailored for any occasion.
+          </p>
+
+          <p className="about-story-highlight">
+            Dianetcafe continues to prove that its enduring success is rooted in a deep, long-standing commitment to customer satisfaction.
+          </p>
+        </div>
+
+        <div className="about-story-logo-wrap">
+          <img src={logo} alt="Dianetcafe Logo" className="about-story-logo" />
         </div>
       </section>
 
