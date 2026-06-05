@@ -1,5 +1,6 @@
 import heroBg from '../assets/hero-bg.jpg'
 import logo from '../assets/logo.png'
+import journeyImage from '../assets/hero-bg.jpg'
 import { Link } from 'react-router-dom'
 
 const About = () => {
@@ -41,17 +42,59 @@ const About = () => {
         </div>
       </section>
 
-      <section className="trusted-section">
-        <div className="trusted-container">
-          <h2>Trusted by many.</h2>
-          <div className="client-grid">
-            {[...Array(12)].map((_, index) => (
-              <div key={index} className="client-logo-card">
-                <div className="client-logo-placeholder">
-                  <span className="client-logo-text">LOGO</span>
-                </div>
+      <section className="journey-section">
+        <h2 className="journey-title">OUR JOURNEY</h2>
+
+        <div className="journey-content">
+          <div className="journey-image-wrap">
+            <img src={journeyImage} alt="Dianetcafe Journey" className="journey-image" />
+
+            <button className="journey-arrow journey-arrow-left">‹</button>
+            <button className="journey-arrow journey-arrow-right">›</button>
+          </div>
+
+          <div className="journey-timeline">
+            <div className="timeline-line"></div>
+
+            <div className="timeline-item">
+              <div className="timeline-year-wrap">
+                <span className="timeline-dot"></span>
+                <h3>2000</h3>
               </div>
-            ))}
+              <p>Dianetcafe was established by the family at Queen's Row West, initially operating as a humble internet and print shop equipped with 12 computers and basic printing services.</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-year-wrap">
+                <span className="timeline-dot"></span>
+                <h3>2004</h3>
+              </div>
+              <p>The business relocated to its current home at Queen's Row Central. While optimizing the setup to 11 computers, the shop expanded its offerings to include in-demand extra services of the era, such as payphones, CD burning, and MP3/MP4 media downloads.</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-year-wrap">
+                <span className="timeline-dot"></span>
+                <h3>2010</h3>
+              </div>
+              <p>The shop underwent a significant expansion. The cafe upgraded its hardware to 15 computers and introduced its very first line of personalized souvenirs to the community.</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-year-wrap">
+                <span className="timeline-dot"></span>
+                <h3>2016</h3>
+              </div>
+              <p>An upgrade on customized items was launched. The acquisition of a professional cutting machine allowed the business to offer a wider variety of creative, custom-made products for any occasion.</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-year-wrap">
+                <span className="timeline-dot"></span>
+                <h3>2021</h3>
+              </div>
+              <p>Embracing the digital shift, the shop expanded its reach through online marketing and upgraded its equipment, officially evolving into the full-service hub it is today.</p>
+            </div>
           </div>
         </div>
       </section>

@@ -469,6 +469,124 @@ button {
   object-fit: contain;
 }
 
+/* Journey Section */
+.journey-section {
+  background: #ffffff;
+  padding: 90px 140px 80px;
+}
+
+.journey-title {
+  font-size: 54px;
+  font-weight: 900;
+  color: #050505;
+  margin: 0 0 42px;
+  letter-spacing: 1px;
+}
+
+.journey-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 55px;
+}
+
+.journey-image-wrap {
+  position: relative;
+  flex: 0 0 48%;
+}
+
+.journey-image {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.journey-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #ffcc00;
+  font-size: 70px;
+  font-weight: 900;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.journey-arrow-left {
+  left: 15px;
+}
+
+.journey-arrow-right {
+  right: 15px;
+}
+
+.journey-timeline {
+  position: relative;
+  flex: 0 0 52%;
+  padding-left: 40px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  bottom: 35px;
+  width: 5px;
+  background: #f2a900;
+  border-radius: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 20px;
+  padding-bottom: 16px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.timeline-year-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -42px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: #f2a900;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-year-wrap h3 {
+  margin: 0;
+  color: #f2a900;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #777777;
+  font-size: 18px;
+  line-height: 1.28;
+  text-align: justify;
+}
+
 /* Navbar overlay for About page */
 body:has(.about-hero) .navbar {
   position: absolute;
@@ -2458,6 +2576,53 @@ body:has(.about-hero) .navbar {
 
   .about-story-logo {
     width: 280px;
+  }
+
+  .journey-section {
+    padding: 50px 1rem 50px;
+  }
+
+  .journey-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .journey-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .journey-image-wrap,
+  .journey-timeline {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .journey-image {
+    height: 280px;
+  }
+
+  .journey-timeline {
+    padding-left: 28px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 75px 1fr;
+    gap: 10px;
+  }
+
+  .timeline-year-wrap h3 {
+    font-size: 20px;
+  }
+
+  .timeline-item p {
+    font-size: 14px;
+  }
+
+  .timeline-dot {
+    left: -30px;
+    width: 14px;
+    height: 14px;
   }
 
   .about-dianetcafe-title {
