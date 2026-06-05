@@ -6,6 +6,11 @@ import onlineImg from '../assets/online-services.png'
 import printerLarge from '../assets/printer-large.png'
 import rushIdMan from '../assets/rush-id-man.png'
 import rushIdWoman from '../assets/rush-id-woman.png'
+import otherTarpaulin from '../assets/other-tarpaulin.png'
+import otherDocuments from '../assets/other-documents.png'
+import otherPhotoPrint from '../assets/other-photo-print.png'
+import otherInvitations from '../assets/other-invitations.png'
+import otherStickers from '../assets/other-stickers.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -140,16 +145,25 @@ const Home = () => {
       <section className="other-printing-services">
         <div className="other-printing-container">
           <h2>OTHER PRINTING SERVICES</h2>
-          <div className="categories-grid">
-            <div className="category-box"><h3>ID PICTURE</h3></div>
-            <div className="category-box"><h3>DOCUMENTS</h3></div>
-            <div className="category-box"><h3>TARPAULIN</h3></div>
-            <div className="category-box"><h3>PHOTO PRINT</h3></div>
-            <div className="category-box"><h3>INVITATIONS</h3></div>
-            <div className="category-box"><h3>STICKERS</h3></div>
+          <div className="other-services-grid">
+            <div className="other-service-card">
+              <img src={otherTarpaulin} alt="Tarpaulin" className="other-service-image" />
+            </div>
+            <div className="other-service-card">
+              <img src={otherDocuments} alt="Documents" className="other-service-image" />
+            </div>
+            <div className="other-service-card">
+              <img src={otherPhotoPrint} alt="Photo Print" className="other-service-image" />
+            </div>
+            <div className="other-service-card">
+              <img src={otherInvitations} alt="Invitations" className="other-service-image" />
+            </div>
+            <div className="other-service-card">
+              <img src={otherStickers} alt="Stickers" className="other-service-image" />
+            </div>
           </div>
           <div className="view-all-container">
-            <button className="cta-button-yellow">VIEW ALL SERVICES</button>
+            <button className="view-all-button">VIEW ALL PRINTING SERVICES</button>
           </div>
         </div>
       </section>
