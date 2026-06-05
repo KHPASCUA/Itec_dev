@@ -11,7 +11,7 @@ import journey8 from '../assets/journey-8.png'
 import journey9 from '../assets/journey-9.png'
 import journey10 from '../assets/journey-10.png'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const journeyImages = [
   journey1,
@@ -28,6 +28,16 @@ const journeyImages = [
 
 const About = () => {
   const [journeyIndex, setJourneyIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setJourneyIndex((prev) =>
+        prev === journeyImages.length - 1 ? 0 : prev + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handlePrevImage = () => {
     setJourneyIndex((prev) => (prev === 0 ? journeyImages.length - 1 : prev - 1))
