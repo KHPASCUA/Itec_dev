@@ -1142,43 +1142,25 @@ button {
 
 .id-card {
   position: absolute;
-  width: 280px;
-  height: 350px;
-  background-color: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  padding: 10px;
+  width: auto;
+  height: auto;
+  max-width: 280px;
+  max-height: 350px;
+  object-fit: contain;
 }
 
 .id-card-back {
-  left: 50px;
-  top: 50px;
-  transform: rotate(-5deg);
+  left: 20px;
+  bottom: 20px;
   z-index: 1;
+  transform: rotate(-3deg);
 }
 
 .id-card-front {
-  right: 50px;
-  bottom: 50px;
-  transform: rotate(5deg);
+  right: 40px;
+  top: 30px;
   z-index: 2;
-}
-
-.id-card-placeholder {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.woman-id {
-  background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
-}
-
-.man-id {
-  background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+  transform: rotate(3deg);
 }
 
 .rush-id-content h1 {
@@ -1429,18 +1411,18 @@ button {
   }
 
   .id-card {
-    width: 200px;
-    height: 250px;
+    max-width: 180px;
+    max-height: 220px;
   }
 
   .id-card-back {
-    left: 30px;
-    top: 30px;
+    left: 20px;
+    bottom: 20px;
   }
 
   .id-card-front {
     right: 30px;
-    bottom: 30px;
+    top: 20px;
   }
 
   .rush-id-content {

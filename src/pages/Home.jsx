@@ -4,6 +4,8 @@ import computerImg from '../assets/computer-rental.png'
 import giftsImg from '../assets/personalized-gifts.png'
 import onlineImg from '../assets/online-services.png'
 import printerLarge from '../assets/printer-large.png'
+import rushIdMan from '../assets/rush-id-man.png'
+import rushIdWoman from '../assets/rush-id-woman.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -118,12 +120,8 @@ const Home = () => {
       <section className="rush-id-section">
         <div className="rush-id-container">
           <div className="rush-id-images">
-            <div className="id-card id-card-back">
-              <div className="id-card-placeholder woman-id"></div>
-            </div>
-            <div className="id-card id-card-front">
-              <div className="id-card-placeholder man-id"></div>
-            </div>
+            <img src={rushIdWoman} alt="Rush ID Woman" className="id-card id-card-back" />
+            <img src={rushIdMan} alt="Rush ID Man" className="id-card id-card-front" />
           </div>
           <div className="rush-id-content">
             <h1>RUSH ID</h1>
