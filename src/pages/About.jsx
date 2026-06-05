@@ -10,6 +10,7 @@ import journey7 from '../assets/journey-7.png'
 import journey8 from '../assets/journey-8.png'
 import journey9 from '../assets/journey-9.png'
 import journey10 from '../assets/journey-10.png'
+import missionVisionImage from '../assets/about-mission-vision.png'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -139,6 +140,38 @@ const About = () => {
               <p>Embracing the digital shift, the shop expanded its reach through online marketing and upgraded its equipment, officially evolving into the full-service hub it is today.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mission-vision-section">
+        <div className="mission-vision-text">
+          <div className="mv-block">
+            <h2>OUR MISSION</h2>
+            <p>
+              To introduce our diverse range of products and actively promote our
+              personalized gifts to the public market. We are dedicated to providing
+              hands-on assistance, ensuring every customer can easily browse and
+              acquire the services they need.
+            </p>
+          </div>
+
+          <div className="mv-block">
+            <h2>OUR VISION</h2>
+            <p>
+              To remain the most trusted one-stop hub for computer rental, printing,
+              and customized services in Cavite. We aim to continuously adapt to
+              modern trends, serving as a reliable and accessible partner for our
+              community's everyday digital needs.
+            </p>
+          </div>
+        </div>
+
+        <div className="mission-vision-image-wrap">
+          <img
+            src={missionVisionImage}
+            alt="Dianetcafe mission and vision"
+            className="mission-vision-image"
+          />
         </div>
       </section>
 

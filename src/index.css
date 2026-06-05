@@ -592,6 +592,61 @@ button {
   text-align: justify;
 }
 
+/* Mission Vision Section */
+.mission-vision-section {
+  background: #ffffff;
+  padding: 110px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+}
+
+.mission-vision-text {
+  flex: 0 0 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.mv-block {
+  max-width: 700px;
+  text-align: center;
+}
+
+.mv-block h2 {
+  margin: 0 0 18px;
+  color: #050505;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.mv-block p {
+  margin: 0;
+  color: #777777;
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.mission-vision-image-wrap {
+  flex: 0 0 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-vision-image {
+  width: 520px;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
 /* Navbar overlay for About page */
 body:has(.about-hero) .navbar {
   position: absolute;
@@ -2384,6 +2439,37 @@ body:has(.about-hero) .navbar {
     left: -34px;
   }
 
+  .mission-vision-section {
+    padding: 70px 24px;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .mission-vision-text {
+    flex: 0 0 auto;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .mv-block h2 {
+    font-size: 38px;
+  }
+
+  .mv-block p {
+    font-size: 16px;
+  }
+
+  .mission-vision-image-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .mission-vision-image {
+    width: 100%;
+    max-width: 360px;
+    height: 390px;
+  }
+
   .categories-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2675,6 +2761,37 @@ body:has(.about-hero) .navbar {
     left: -30px;
     width: 14px;
     height: 14px;
+  }
+
+  .mission-vision-section {
+    padding: 50px 1rem 50px;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .mission-vision-text {
+    flex: 0 0 auto;
+    width: 100%;
+    gap: 40px;
+  }
+
+  .mv-block h2 {
+    font-size: 32px;
+  }
+
+  .mv-block p {
+    font-size: 15px;
+  }
+
+  .mission-vision-image-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .mission-vision-image {
+    width: 100%;
+    max-width: 320px;
+    height: 350px;
   }
 
   .about-dianetcafe-title {
