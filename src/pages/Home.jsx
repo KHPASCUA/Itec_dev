@@ -19,9 +19,13 @@ const Home = () => {
           </h1>
           <p>Printing services, computer rentals, online appointments, and personalized gifts — all in one place.</p>
           <div className="hero-buttons">
-            <button className="cta-button-yellow">GET A QUOTE</button>
+            <button className="cta-button-yellow">GET STARTED</button>
             <button className="cta-button-transparent" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>OUR SERVICES</button>
           </div>
+        </div>
+        <div className="hero-bottom">
+          <div className="hero-line"></div>
+          <div className="hero-arrow">↓</div>
         </div>
       </section>
 
