@@ -1117,7 +1117,134 @@ button {
   }
 }
 
-/* Printing Services */
+/* Rush ID Section */
+.rush-id-section {
+  background-color: #f8f8f8;
+  padding: 6rem 2rem;
+}
+
+.rush-id-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.rush-id-images {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.id-card {
+  position: absolute;
+  width: 280px;
+  height: 350px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+
+.id-card-back {
+  left: 50px;
+  top: 50px;
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+
+.id-card-front {
+  right: 50px;
+  bottom: 50px;
+  transform: rotate(5deg);
+  z-index: 2;
+}
+
+.id-card-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.woman-id {
+  background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+}
+
+.man-id {
+  background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+}
+
+.rush-id-content h1 {
+  font-size: clamp(64px, 8vw, 120px);
+  font-weight: 900;
+  color: #000;
+  margin: 0 0 10px 0;
+  line-height: 0.9;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.rush-id-content h3 {
+  font-size: 32px;
+  color: #e49a00;
+  margin: 0 0 30px 0;
+  font-weight: 800;
+}
+
+.rush-id-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6b6b6b;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.rush-id-button {
+  width: 220px;
+  height: 55px;
+  border: 2px solid #e49a00;
+  background: transparent;
+  color: #e49a00;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.rush-id-button:hover {
+  background: #e49a00;
+  color: #fff;
+}
+
+/* Other Printing Services */
+.other-printing-services {
+  background-color: var(--black);
+  padding: 4rem 2rem;
+}
+
+.other-printing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.other-printing-services h2 {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+/* Printing Services (legacy - kept for compatibility) */
 .printing-services {
   background-color: var(--white);
   padding: 4rem 2rem;
@@ -1289,6 +1416,51 @@ button {
   .tarpaulin-bg-text {
     font-size: 90px;
     bottom: 20px;
+  }
+
+  .rush-id-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .rush-id-images {
+    height: 300px;
+    order: 1;
+  }
+
+  .id-card {
+    width: 200px;
+    height: 250px;
+  }
+
+  .id-card-back {
+    left: 30px;
+    top: 30px;
+  }
+
+  .id-card-front {
+    right: 30px;
+    bottom: 30px;
+  }
+
+  .rush-id-content {
+    order: 2;
+  }
+
+  .rush-id-content h1 {
+    font-size: 48px;
+  }
+
+  .rush-id-content h3 {
+    font-size: 24px;
+  }
+
+  .rush-id-content p {
+    font-size: 16px;
+  }
+
+  .rush-id-button {
+    width: 100%;
   }
 }
 

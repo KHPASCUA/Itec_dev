@@ -88,9 +88,33 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="printing-services">
-        <div className="printing-services-container">
-          <h2>PRINTING SERVICES</h2>
+      <section className="rush-id-section">
+        <div className="rush-id-container">
+          <div className="rush-id-images">
+            <div className="id-card id-card-back">
+              <div className="id-card-placeholder woman-id"></div>
+            </div>
+            <div className="id-card id-card-front">
+              <div className="id-card-placeholder man-id"></div>
+            </div>
+          </div>
+          <div className="rush-id-content">
+            <h1>RUSH ID</h1>
+            <h3>Printing Services</h3>
+            <p>
+              Need your ID picture urgently? We offer rush ID printing services with professional quality and fast turnaround. Perfect for students, professionals, and anyone who needs their ID picture done quickly without compromising on quality.
+            </p>
+            <p>
+              Our rush ID service includes high-resolution printing, proper sizing for various ID requirements, and professional finishing. Get your ID ready in minutes, not hours!
+            </p>
+            <button className="rush-id-button">Get Rush ID Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="other-printing-services">
+        <div className="other-printing-container">
+          <h2>OTHER PRINTING SERVICES</h2>
           <div className="categories-grid">
             <div className="category-box"><h3>ID PICTURE</h3></div>
             <div className="category-box"><h3>DOCUMENTS</h3></div>
