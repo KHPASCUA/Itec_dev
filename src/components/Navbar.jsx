@@ -44,11 +44,21 @@ const Navbar = () => {
           </span>
         </button>
         <ul className={`navbar-menu ${isOpen ? 'open' : ''}`}>
-          <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Home</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>About</NavLink></li>
-          <li><NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Services</NavLink></li>
-          <li><NavLink to="/gallery" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Gallery</NavLink></li>
-          <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact Us</NavLink></li>
+          <li>
+            <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Services</NavLink>
+          </li>
+          <li>
+            <NavLink to="/gallery" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Gallery</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact Us</NavLink>
+          </li>
         </ul>
       </div>
     </nav>

@@ -12,7 +12,6 @@ import journey9 from '../assets/journey-9.png'
 import journey10 from '../assets/journey-10.png'
 import missionVisionImage from '../assets/about-mission-vision.png'
 import foundersImage from '../assets/about-founders.png'
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { FaRegHeart, FaRegUser, FaAward, FaFastForward } from 'react-icons/fa'
 
