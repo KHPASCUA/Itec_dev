@@ -13,15 +13,20 @@ import otherInvitations from '../assets/other-invitations.png'
 import otherStickers from '../assets/other-stickers.png'
 import personalizeBg from '../assets/personalize-section.png'
 import computerRentalsBg from '../assets/computer-rentals-section.png'
-
+// Add the import for your new arrow image
+// import scrollArrow from '../assets/image_2ce92c.png' 
 
 const Home = () => {
+  const scrollToServices = (e) => {
+    e.preventDefault();
+    document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="hero-content">
           <h1>
-            {/* Split into individual spans for per-letter vertical gradients */}
             <span className="print-word">
               <span className="print-letter letter-p">P</span>
               <span className="print-letter letter-r">r</span>
@@ -35,52 +40,68 @@ const Home = () => {
           <p className="hero-subtitle">Printing services, computer rentals, online appointments,<br/>and personalized gifts — all in one place.</p>
           <div className="hero-buttons">
             <button className="cta-button-yellow">GET STARTED</button>
-            <button className="cta-button-transparent" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>OUR SERVICES</button>
+            <button className="cta-button-transparent" onClick={scrollToServices}>OUR SERVICES</button>
           </div>
         </div>
         
-        {/* Optional: Kept your original bottom arrow, you can remove if not needed in new design */}
-        <div className="hero-bottom">
-          <div className="hero-line"></div>
-          <div className="hero-arrow">↓</div>
+        {/* Gradient fade to black with the inline SVG chevron */}
+        <div className="hero-bottom-gradient">
+          <a href="#services" onClick={scrollToServices}>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="46" 
+              height="46" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="#ffe600" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              className="hero-arrow-svg"
+            >
+              <polyline points="2 9 12 16 22 9"></polyline>
+            </svg>
+          </a>
         </div>
       </section>
 
       <section id="services" className="services">
         <div className="services-container">
-          <div className="services-arrow">↓</div>
-          <h2>WHAT WE OFFER</h2>
           <div className="services-grid">
+            {/* Card 1 */}
             <div className="service-card">
               <img src={printingImg} alt="Printing Services" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Printing Services</h3>
                 <p>Document Printing, Scanning, Photo Printing, Photocopying, Rush ID, Tarpaulins and more!</p>
-                <a href="#" className="service-link">SEE MORE →</a>
+                <a href="#services" className="service-link" onClick={(e) => e.preventDefault()}>SEE MORE <span className="arrow-icon">&gt;</span></a>
               </div>
             </div>
+            {/* Card 2 */}
             <div className="service-card">
               <img src={computerImg} alt="Computer Rental" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Computer Rental</h3>
                 <p>Mid-performance PCs, web browsing, computer gaming and more!</p>
-                <a href="#" className="service-link">SEE MORE →</a>
+                <a href="#services" className="service-link" onClick={(e) => e.preventDefault()}>SEE MORE <span className="arrow-icon">&gt;</span></a>
               </div>
             </div>
+            {/* Card 3 */}
             <div className="service-card">
               <img src={giftsImg} alt="Personalized Gifts" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Personalized Gifts</h3>
                 <p>Mugs, Keychains, T-Shirts, Personalized Pens, Notebooks, Engraved Souvenirs, Tumblers and more!</p>
-                <a href="#" className="service-link">SEE MORE →</a>
+                <a href="#services" className="service-link" onClick={(e) => e.preventDefault()}>SEE MORE <span className="arrow-icon">&gt;</span></a>
               </div>
             </div>
+            {/* Card 4 */}
             <div className="service-card">
               <img src={onlineImg} alt="Online Services" className="service-card-image" />
               <div className="service-card-content">
                 <h3>Online Services</h3>
                 <p>NBI Clearance, DFA Passport Appointment, PhilHealth, SSS and more!</p>
-                <a href="#" className="service-link">SEE MORE →</a>
+                <a href="#services" className="service-link" onClick={(e) => e.preventDefault()}>SEE MORE <span className="arrow-icon">&gt;</span></a>
               </div>
             </div>
           </div>
@@ -90,13 +111,13 @@ const Home = () => {
       <section className="personalized-cta">
         <div className="personalized-cta-container">
           <div className="personalized-cta-banner">
-            <div className="cta-banner-content">
+            <div className="cta-banner-left">
               <h2>NEED SOMETHING PERSONALIZED?</h2>
               <p>We create custom designs for your gifts, souvenirs and giveaways!</p>
             </div>
             <div className="cta-banner-right">
-              <button className="cta-button-yellow">CREATE ME A CUSTOMIZED!</button>
-              <p className="cta-samples-link">Don't know where to start? <span className="yellow-text">View our Samples!</span></p>
+              <button className="cta-button-yellow-banner">CREATE ME A CUSTOMIZED!</button>
+              <p className="cta-samples-link">Don't know where to start? <a href="#gallery" className="yellow-text">View our Samples!</a></p>
             </div>
           </div>
         </div>

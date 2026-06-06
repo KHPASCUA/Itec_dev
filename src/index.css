@@ -340,7 +340,10 @@ button {
 /* The colorful cursive 'Print' */
 .print-word {
   display: inline-flex; 
-  margin-bottom: -20px; 
+  /* Increased negative margin drastically to pull the next line upward */
+  margin-bottom: -40px; 
+  position: relative;
+  z-index: 2; /* Ensures the cursive tails sit on top of the text below if they touch */
 }
 
 .print-letter {
@@ -382,11 +385,12 @@ button {
   letter-spacing: -2px; /* Tighter letter spacing */
   line-height: 0.9; 
   display: block;
+  margin-top: 0px;
 }
 
 .hero-subtitle {
   font-family: var(--sans);
-  font-weight: 400; /* MADE TOMMY Regular */
+  font-weight: 300; /* MADE TOMMY Regular */
   font-size: 1.05rem; /* Slightly smaller text */
   color: #EDEDED;
   margin-top: 1rem;
@@ -449,10 +453,10 @@ button {
 .cta-button-yellow,
 .cta-button-transparent {
   font-family: var(--sans);
-  padding: 0.8rem 2.2rem; /* Sleeker: shorter vertically, wider horizontally */
+  padding: 0.3rem 2.2rem; /* Sleeker: shorter vertically, wider horizontally */
   font-size: 0.9rem; /* Smaller text */
   font-weight: 500; /* MADE TOMMY Medium */
-  border-radius: 5px; /* Sharper corners to match prototype */
+  border-radius: 8px; /* Sharper corners to match prototype */
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -471,8 +475,9 @@ button {
 }
 
 .cta-button-yellow:hover {
-  background-color: #e6cf00;
+  background-color: #0a0a0a;
   border-color: #e6cf00;
+  color: #e6cf00;
 }
 
 .cta-button-transparent {
@@ -480,7 +485,7 @@ button {
   background-color: transparent;
   color: var(--yellow);
   border: 2px solid var(--yellow);
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   font-size: 1rem;
   font-weight: 500; /* MADE TOMMY Medium */
   border-radius: 8px; 
@@ -489,7 +494,8 @@ button {
 }
 
 .cta-button-transparent:hover {
-  background-color: rgba(255, 230, 0, 0.1);
+  background-color: #e6cf00;
+  color: #0a0a0a;
 }
 
 /* About Hero */
@@ -3079,7 +3085,57 @@ body:has(.services-hero) .navbar {
   }
 
   .hero-buttons {
-    flex-direction: column;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start; /* Stops buttons from stretching vertically */
+  }
+
+  /* ==================== */
+  /* Hero Bottom Gradient & Arrow */
+  /* ==================== */
+
+.hero-bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px; 
+  /* Smooth black fade at the very bottom */
+  background: linear-gradient(180deg, transparent 0%, #000000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+  
+  /* CRITICAL FIX: 30px of padding pushes the arrow safely above the clipping edge so it is 100% visible */
+  padding-bottom: 30px; 
+  z-index: 50; /* Forces it to the very front layer */
+  
+  /* Prevents the invisible gradient box from blocking clicks on elements behind it */
+  pointer-events: none; 
+}
+
+.hero-bottom-gradient a {
+  /* Re-enables clicking specifically for the arrow link */
+  pointer-events: auto; 
+  display: block;
+}
+
+.hero-arrow-svg {
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+
+  .hero-arrow-svg:hover {
+    transform: scale(1.15);
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
   }
 
   .cta-button-yellow,
@@ -3364,3 +3420,216 @@ body:has(.services-hero) .navbar {
     letter-spacing: 3px;
   }
 }
+
+/* ==================== */
+/* Services Section     */
+/* ==================== */
+
+.services {
+  background-color: #000000;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.services-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem; /* Tighter gap matching the screenshot */
+}
+
+/* Matches the exact card look from the image */
+.service-card {
+  background-color: #090909; 
+  border: 1px solid #1f1f1f; /* Subtle dark border */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: #333333;
+}
+
+.service-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card-content h3 {
+  font-family: var(--sans);
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.service-card-content p {
+  font-family: var(--sans);
+  color: #d1d5db; /* Light gray text */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.service-link {
+  color: #ffe600;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.service-link:hover {
+  color: #ffc400;
+}
+
+.arrow-icon {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+/* ==================== */
+/* Personalized Banner  */
+/* ==================== */
+
+.personalized-cta {
+  background-color: #000000;
+  padding: 3rem 2rem 5rem 2rem;
+}
+
+.personalized-cta-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* Exact gradient and styling from the prototype */
+.personalized-cta-banner {
+  background: linear-gradient(135deg, #785800 0%, #2b2000 100%);
+  border-radius: 12px;
+  padding: 2.5rem 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 1px solid #523d00;
+}
+
+.cta-banner-left h2 {
+  font-family: var(--sans);
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 900; /* Extra thick weight for banner title */
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+.cta-banner-left p {
+  font-family: var(--sans);
+  color: #e5e7eb;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cta-banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+  min-width: 320px;
+}
+
+.cta-button-yellow-banner {
+  font-family: var(--sans);
+  background-color: #ffe600;
+  color: #090909;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-button-yellow-banner:hover {
+  background-color: #e6cf00;
+  transform: translateY(-2px);
+}
+
+.cta-samples-link {
+  font-family: var(--sans);
+  color: #a3a3a3;
+  font-size: 0.85rem;
+  margin: 0;
+  text-align: right;
+  width: 100%;
+}
+
+.yellow-text {
+  color: #ffe600;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.yellow-text:hover {
+  text-decoration: underline;
+}
+
+/* Banner Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .personalized-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+  
+  .cta-banner-right {
+    align-items: center;
+    min-width: 100%;
+  }
+  
+  .cta-samples-link {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-banner-left h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+}
+
